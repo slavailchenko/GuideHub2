@@ -26,13 +26,11 @@ app.controller('ArticleDetails', ['$scope', '$routeParams', 'articles.repository
 			
 
 	        function addLike (articleId) {
-        	console.log ($scope.autoriz);
-           
-            if ($scope.autoriz==true) {
+        	
+           		if ($scope.autoriz==true) {
             
 				    console.log ($scope.likesElemets);
-            		console.log ($scope.likes);
-                	
+            		
                 	for (let i=0; i<$scope.likes; i++) {
                 		if ($scope.newLike.user_id == $scope.likesElemets[i].user_id) {
                 			alert ('Вы уже поставили лайк') 
@@ -42,14 +40,14 @@ app.controller('ArticleDetails', ['$scope', '$routeParams', 'articles.repository
                                		console.log ('else');
                                		articlesRepository.addLikes(articleId)
             						.then(function(response){
-            							console.log (response.data);
-            							
+            		           							
             							$scope.newLike= {
 														"article_id": articleId,
 											            "user_id": localStorage.getItem('userId')
 														};
             								
 										console.log (response.data);
+										if (response.data.errors.length) return;
 									}, function(error) {});
 									}
                                	}

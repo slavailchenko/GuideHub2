@@ -90,6 +90,7 @@
 		var locale = "ru";
 
 		$scope.user = [];
+		$scope.likes = [];
 
 		for (let i=0; i<response.data.length; i++) {
 			
@@ -97,7 +98,15 @@
 
 			$scope.user [i] = response.data.firstname;
 					
-		}, function(error) {}); }
+				}, function(error) {}); 
+
+			articlesRepository.getLikes($scope.articles[i].id).then(function(response) {
+			 		
+			$scope.likes[i]=response.data.length;
+			console.log ($scope.likes[i]);
+
+				}, function(error) {});
+		}
 
 
 		for (let i=0; i<response.data.length; i++) {
