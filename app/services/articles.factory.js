@@ -17,12 +17,12 @@ app.factory('articles.repository', ['webApi', '$http', function(webApi, $http) {
 		return $http.get(webApi.DOMAIN + '/api/v1/articles/' + articleId);
 	}
 
-	function _addLikes(articleId, userId) {
-		return $http.post(webApi.DOMAIN + '/api/v1/articles/' + articleId + '/likes', userId);
+	function _addLikes(articleId, {user_id: userId}) {
+		return $http.post(webApi.DOMAIN + '/api/v1/articles/' + articleId + '/likes', {user_id: userId});
 	}
 
-	function _addFavorites() {
-		return $http.post(webApi.DOMAIN + '/api/v1/favorites');
+	function _addFavorites(data) {
+		return $http.post(webApi.DOMAIN + '/api/v1/favorites', data);
 	}
 
 	function _getLikes(articleId) {
