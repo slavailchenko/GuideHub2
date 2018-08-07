@@ -3,58 +3,43 @@
         <h1>{{articles.city}}</h1>
         <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid officiis sequi </h2>
     </div>
-    <div class="container article-city">
-        <span>{{articles.city_description}}</span>
-    </div>
-    <div class="header-article-region" ng-parallax pattern="'./image/static-article/baselRegion.png'" speed="3" reverse="true">
-        <h1>{{articles.region}}</h1>
-        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid officiis sequi </h2>
-    </div>
-    <div class="container article-region">
-        <span >{{articles.region_description}}</span>
-    </div>
-    <div class="add-comment container">
-        <textarea name="addComment" cols="90" rows="2" ng-model="newComment.content"></textarea>
-        <button class="btn btn-info pull-right" ng-click="addComment()"><i class="glyphicon glyphicon-plus" ></i> Add Comment</button>
-    </div>
-    <div class="container comments-article">
-        <div class="comment-article" ng-repeat="comment in comments"> 
-            <img ng-src="http://node3.fe.a-level.com.ua/{{comment.user.photo}}" ng-if="comment.user.photo"alt="NO Foto" style="width: 150px; height: 150px; border-radius: 75px 75px">
-            <img ng-src="./image/static-article/nofoto.jpg" ng-if="!comment.user.photo"alt="NO Foto" style="width: 150px; height: 150px; border-radius: 75px 75px">
-            <span>{{comment.user.firstname}}</span>
-            <span>{{comment.user.lastname}}</span>
-            <span ng-if="!comment.editMod">{{comment.content}}</span>
-            <div ng-if="comment.editMod">
-                <input type="text" ng-model="editObj.content">
-                <button ng-click="addEditComment(comment.id, comment.rate)" class="btn btn-success" ng-if="comment.access"><i class="glyphicon glyphicon-ok"></i></button>
-                <button ng-click="cancelEditComment(comment.id)" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i></button>
+    <div class="backgraund_article">
+        <div class="container article-city">
+            <div class="plate" style="margin-bottom: 50px; margin-top: 50px;">
+                <span>{{articles.city_description}}</span>
             </div>
-            <span>{{comment.date_added}}</span>
-            <button ng-click="deleteComment(comment.id)" class="btn btn-danger" ng-if="comment.access"><i class="glyphicon glyphicon-trash"></i></button>
-            <button ng-click="commentComment(comment.id)" ng-show="!comment.commentMod" ng-if="autoraisMod" class="btn btn-info">Comment</button>
-            <button ng-click="editComment(comment.id, comment.content)" ng-if="comment.access" class="btn btn-success" ng-if="!comment.editMod"><i class="glyphicon glyphicon-pencil"></i></button>
-            <div ng-if="comment.commentMod">
-                <input type="text" ng-model="newComment.content">
-                <button ng-click="addCommentComment(comment.id)" class="btn btn-info">Comment</button>
-                <button ng-click="cancelCommentComment(comment.id)" class="btn btn-danger">Cancel</button>
+        </div>
+        <div class="header-article-region" ng-parallax pattern="'./image/static-article/basel2.JPG'" speed="3" reverse="true">
+            <h1>{{articles.region}}</h1>
+            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid officiis sequi </h2>
+        </div>
+        <div class="container article-region">
+            <div class="plate" style="margin-bottom: 50px; margin-top: 50px;">
+                <span >{{articles.region_description}}</span>
+            </div> 
+        </div>
+
+        <div class="container main_comment">
+            <div class="add-comment container plate">
+                <textarea name="addComment" ng-model="newComment.content"></textarea>
+                <span class="buttonHover" ng-click="addComment()"><i class="glyphicon glyphicon-plus" ></i>Add Comment</span>
             </div>
-            <div style="padding-left: 30px;" ng-if="comment.nested">
-                <div ng-repeat="comment in comment.nested">
-                    <img ng-src="http://node3.fe.a-level.com.ua/{{comment.user.photo}}" ng-if="comment.user.photo"alt="NO Foto" style="width: 150px; height: 150px; border-radius: 75px 75px">
-                    <img ng-src="./image/static-article/nofoto.jpg" ng-if="!comment.user.photo"alt="NO Foto" style="width: 150px; height: 150px; border-radius: 75px 75px">
-                        <span>{{comment.user.firstname}}</span>
-                        <span>{{comment.user.lastname}}</span>
-                        <span ng-if="!comment.editMod">{{comment.content}}</span>
-                        <div ng-if="comment.editMod">
-                            <input type="text" ng-model="editObj.content">
-                            <button ng-click="addEditComment(comment.id, comment.rate)" class="btn btn-success" ng-if="comment.access"><i class="glyphicon glyphicon-ok"></i></button>
-                            <button ng-click="cancelEditComment(comment.id)" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i></button>
+            <div class="container comments-article">
+                <div class="firstComment">
+                    <div ng-repeat="comment in comments"> 
+                        <div class="comment-article plate" ng-include="'./app/views/map/country/swiss/comment_Static.html'"></div>
+                        <div style="padding-left: 70px;" ng-if="comment.nested">
+                            <div ng-repeat="comment in comment.nested">
+                                <div class="comment-article plate" ng-include="'./app/views/map/country/swiss/comment_Static.html'"></div>
+                                <div style="padding-left: 80px;" ng-if="comment.nested">
+                                    <div ng-repeat="comment in comment.nested">
+                                        <div class="comment-article plate" ng-include="'./app/views/map/country/swiss/comment_Static.html'"></div> 
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <span>{{comment.date_added}}</span>
-                        <button ng-click="deleteComment(comment.id)" class="btn btn-danger" ng-if="comment.access"><i class="glyphicon glyphicon-trash"></i></button>
-                        <button ng-click="editComment(comment.id, comment.content)" ng-if="comment.access" class="btn btn-success" ng-if="!comment.editMod"><i class="glyphicon glyphicon-pencil"></i></button>
-                        
-                <div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -1,12 +1,20 @@
 .europe-map {
     stroke: black;
     stroke-width: 2px;
-    fill: none;
+    fill: #77451b73;
+}
+.rus,.ukr,.bel,.est,.lat,.lit,.polmol,.roma,.bulg,.serb,.gre,.maked,.slovak,.hung,.cze,.aust,.slowenia,.croat,.BandG,.monte,.alb,.swiss,.germ,.nether,.belg,.lux,.ital,.fran,.spain,.port,.turck,.fin,.sveden,.norway,.UK,.irland{
+    transition: 1s;
+}
+.rus:hover,.ukr:hover,.be:hover,.est:hover,.lat:hover,.lit:hover,.pol:hover,.mol:hover,.roma:hover,.bulg:hover,.serb:hover,.gre:hover,.maked:hover,.slovak:hover,.hung:hover,.cze:hover,.aust:hover,.slowenia:hover,.croat:hover,.BandG:hover,.monte:hover,.alb:hover,.swiss:hover,.germ:hover,.nether:hover,.belg:hover,.lux:hover,.ital:hover,.fran:hover,.spain:hover,.port:hover,.turck:hover,.fin:hover,.sveden:hover,.norway:hover,.UK:hover,.irland:hover{
+    fill: #77451bc2;
+    stroke: white;
+    transform: scale(1.03)
 }
 .rus{
     stroke-dasharray: 2162;
     -webkit-animation: rus 3s linear forwards;
-    fill: black;
+
     fill-opacity: 0;
 }
 @-webkit-keyframes rus {
@@ -22,7 +30,6 @@
 .ukr{
     stroke-dasharray: 1200;
     -webkit-animation: ukr 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes ukr {
@@ -38,7 +45,6 @@
 .bel{
     stroke-dasharray: 1000;
     -webkit-animation: bel 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes bel {
@@ -54,7 +60,6 @@
 .est{
     stroke-dasharray: 400;
     -webkit-animation: est 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes est {
@@ -70,7 +75,6 @@
 .lat{
     stroke-dasharray: 400;
     -webkit-animation: lat 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes lat {
@@ -86,7 +90,6 @@
 .lit{
     stroke-dasharray: 400;
     -webkit-animation: lit 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes lit {
@@ -102,7 +105,6 @@
 .pol{
     stroke-dasharray: 600;
     -webkit-animation: pol 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes pol {
@@ -118,7 +120,6 @@
 .mol{
     stroke-dasharray: 300;
     -webkit-animation: mol 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes mol {
@@ -134,7 +135,6 @@
 .roma{
     stroke-dasharray: 400;
     -webkit-animation: roma 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes roma {
@@ -150,7 +150,6 @@
 .bulg{
     stroke-dasharray: 400;
     -webkit-animation: bulg 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes bulg {
@@ -166,7 +165,6 @@
 .serb{
     stroke-dasharray: 300;
     -webkit-animation: serb 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes serb {
@@ -182,7 +180,6 @@
 .gre{
     stroke-dasharray: 550;
     -webkit-animation: gre 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes gre {
@@ -198,7 +195,6 @@
 .maked{
     stroke-dasharray: 300;
     -webkit-animation: maked 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes maked {
@@ -214,7 +210,6 @@
 .slovak{
     stroke-dasharray: 200;
     -webkit-animation: slovak 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes slovak {
@@ -230,7 +225,6 @@
 .hung{
     stroke-dasharray: 300;
     -webkit-animation: hung 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes hung {
@@ -246,7 +240,6 @@
 .cze{
     stroke-dasharray: 300;
     -webkit-animation: cze 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes cze {
@@ -262,7 +255,6 @@
 .aust{
     stroke-dasharray: 300;
     -webkit-animation: aust 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes aust {
@@ -278,7 +270,6 @@
 .slowenia{
     stroke-dasharray: 150;
     -webkit-animation: slowenia 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes slowenia {
@@ -294,7 +285,6 @@
 .croat{
     stroke-dasharray: 200;
     -webkit-animation: croat 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes croat {
@@ -311,7 +301,6 @@
 .BandG{
     stroke-dasharray: 200;
     -webkit-animation: BandG 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes BandG {
@@ -327,7 +316,6 @@
 .monte{
     stroke-dasharray: 100;
     -webkit-animation: monte 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes monte {
@@ -343,7 +331,6 @@
 .alb{
     stroke-dasharray: 150;
     -webkit-animation: alb 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes alb {
@@ -359,7 +346,6 @@
 .swiss{
     stroke-dasharray: 200;
     -webkit-animation: swiss 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes swiss {
@@ -375,7 +361,6 @@
 .germ{
     stroke-dasharray: 850;
     -webkit-animation: germ 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes germ {
@@ -391,7 +376,6 @@
 .nether{
     stroke-dasharray: 200;
     -webkit-animation: nether 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes nether {
@@ -407,7 +391,6 @@
 .belg{
     stroke-dasharray: 200;
     -webkit-animation: belg 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes belg {
@@ -423,7 +406,6 @@
 .lux{
     stroke-dasharray: 50;
     -webkit-animation: lux 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes lux {
@@ -439,7 +421,6 @@
 .ital{
     stroke-dasharray: 950;
     -webkit-animation: ital 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes ital {
@@ -455,7 +436,6 @@
 .fran{
     stroke-dasharray: 950;
     -webkit-animation: fran 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes fran {
@@ -471,7 +451,6 @@
 .spain{
     stroke-dasharray: 850;
     -webkit-animation: spain 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes spain {
@@ -487,7 +466,6 @@
 .port{
     stroke-dasharray: 750;
     -webkit-animation: port 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes port {
@@ -503,7 +481,6 @@
 .turck{
     stroke-dasharray: 200;
     -webkit-animation: turck 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes turck {
@@ -519,7 +496,6 @@
 .fin{
     stroke-dasharray: 1000;
     -webkit-animation: fin 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes fin {
@@ -535,7 +511,6 @@
 .sveden{
     stroke-dasharray: 1000;
     -webkit-animation: sveden 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes sveden {
@@ -551,7 +526,6 @@
 .norway{
     stroke-dasharray: 2500;
     -webkit-animation: norway 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes norway {
@@ -567,7 +541,6 @@
 .UK{
     stroke-dasharray: 1200;
     -webkit-animation: UK 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes UK {
@@ -583,7 +556,6 @@
 .irland{
     stroke-dasharray: 500;
     -webkit-animation: irland 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes irland {
@@ -600,7 +572,6 @@
 /* CLICK */
 .rus_cl{
     -webkit-animation: rus_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes rus_cl {
@@ -617,7 +588,6 @@
 }
 .ukr_cl{
     -webkit-animation: ukr_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes ukr_cl {
@@ -634,7 +604,6 @@
 }
 .bel_cl{
     -webkit-animation: bel_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes bel_cl {
@@ -651,7 +620,6 @@
 }
 .est_cl{
     -webkit-animation: bel_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes bel_cl {
@@ -668,7 +636,6 @@
 }
 .lat_cl{
     -webkit-animation: lat_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes lat_cl {
@@ -685,7 +652,6 @@
 }
 .lit_cl{
     -webkit-animation: lit_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes lit_cl {
@@ -702,7 +668,6 @@
 }
 .pol_cl{
     -webkit-animation: pol_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes pol_cl {
@@ -719,7 +684,6 @@
 }
 .mol_cl{
     -webkit-animation: mol_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes mol_cl {
@@ -736,7 +700,6 @@
 }
 .roma_cl{
     -webkit-animation: roma_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes roma_cl {
@@ -753,7 +716,6 @@
 }
 .bulg_cl{
     -webkit-animation: bulg_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes bulg_cl {
@@ -770,7 +732,6 @@
 }
 .serb_cl{
     -webkit-animation: serb_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes serb_cl {
@@ -787,7 +748,6 @@
 }
 .gre_cl{
     -webkit-animation: gre_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes gre_cl {
@@ -804,7 +764,6 @@
 }
 .maked_cl{
     -webkit-animation: maked_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes maked_cl {
@@ -821,7 +780,6 @@
 }
 .slovak_cl{
     -webkit-animation: slovak_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes slovak_cl {
@@ -838,7 +796,6 @@
 }
 .hung_cl{
     -webkit-animation: hung_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes hung_cl {
@@ -855,7 +812,6 @@
 }
 .cze_cl{
     -webkit-animation: cze_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes cze_cl {
@@ -872,7 +828,6 @@
 }
 .aust_cl{
     -webkit-animation: aust_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes aust_cl {
@@ -889,7 +844,6 @@
 }
 .slowenia_cl{
     -webkit-animation: slowenia_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes slowenia_cl {
@@ -906,7 +860,6 @@
 }
 .croat_cl{
     -webkit-animation: croat_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes croat_cl {
@@ -923,7 +876,6 @@
 }
 .BandG_cl{
     -webkit-animation: BandG_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes BandG_cl {
@@ -940,7 +892,6 @@
 }
 .monte_cl{
     -webkit-animation: monte_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes monte_cl {
@@ -957,7 +908,6 @@
 }
 .alb_cl{
     -webkit-animation: alb_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes alb_cl {
@@ -974,7 +924,6 @@
 }
 .swiss_cl{
     -webkit-animation: swiss_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes swiss_cl {
@@ -991,7 +940,6 @@
 }
 .germ_cl{
     -webkit-animation: germ_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes germ_cl {
@@ -1008,7 +956,6 @@
 }
 .nether_cl{
     -webkit-animation: nether_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes nether_cl {
@@ -1025,7 +972,6 @@
 }
 .belg_cl{
     -webkit-animation: belg_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes belg_cl {
@@ -1042,7 +988,6 @@
 }
 .lux_cl{
     -webkit-animation: lux_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes lux_cl {
@@ -1059,7 +1004,6 @@
 }
 .ital_cl{
     -webkit-animation: ital_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes ital_cl {
@@ -1076,7 +1020,6 @@
 }
 .fran_cl{
     -webkit-animation: fran_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes fran_cl {
@@ -1093,7 +1036,6 @@
 }
 .spain_cl{
     -webkit-animation: spain_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes spain_cl {
@@ -1110,7 +1052,6 @@
 }
 .port_cl{
     -webkit-animation: port_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes port_cl {
@@ -1127,7 +1068,6 @@
 }
 .turck_cl{
     -webkit-animation: turck_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes turck_cl {
@@ -1144,7 +1084,6 @@
 }
 .fin_cl{
     -webkit-animation: fin_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes fin_cl {
@@ -1161,7 +1100,6 @@
 }
 .sveden_cl{
     -webkit-animation: sveden_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes sveden_cl {
@@ -1178,7 +1116,6 @@
 }
 .norway_cl{
     -webkit-animation: norway_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes norway_cl {
@@ -1195,7 +1132,6 @@
 }
 .UK_cl{
     -webkit-animation: UK_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes UK_cl {
@@ -1212,7 +1148,6 @@
 }
 .irland_cl{
     -webkit-animation: irland_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes irland_cl {
