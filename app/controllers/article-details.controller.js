@@ -42,16 +42,17 @@ app.controller('ArticleDetails', ['$scope', '$rootScope', '$routeParams', 'webAp
                  			return;
                               	} 
                            }; 
-                               	
-    			articlesRepository.addFavorites($scope.newLike)
+                             	
+ 			
+		   		articlesRepository.addFavorites($scope.newLike)
 		   		.then(function (response) {
 		   			
 		   			console.log (response);
 
 
 		   		}, function(error) {});
-		   	}
 		   }
+		}
 
  		// функция добавления лайка
 
