@@ -25,14 +25,14 @@
         </div>
         <div class="container comments-article">
             <div class="firstComment">
-                <div class="comment-article" ng-repeat="comment in comments"> 
-                    <div ng-include="'./app/views/map/country/swiss/comment_Static.html'"></div>
-                    <div style="padding-left: 30px;" ng-if="comment.nested">
+                <div ng-repeat="comment in comments"> 
+                    <div class="comment-article" ng-include="'./app/views/map/country/swiss/comment_Static.html'"></div>
+                    <div style="padding-left: 70px;" ng-if="comment.nested">
                         <div ng-repeat="comment in comment.nested">
-                            <div ng-include="'./app/views/map/country/swiss/comment_Static.html'"></div>
-                            <div style="padding-left: 30px;" ng-if="comment.nested">
+                            <div class="comment-article" ng-include="'./app/views/map/country/swiss/comment_Static.html'"></div>
+                            <div style="padding-left: 80px;" ng-if="comment.nested">
                                 <div ng-repeat="comment in comment.nested">
-                                    <div ng-include="'./app/views/map/country/swiss/comment_Static.html'"></div> 
+                                    <div class="comment-article" ng-include="'./app/views/map/country/swiss/comment_Static.html'"></div> 
                                 </div>
                             </div>
                         </div>

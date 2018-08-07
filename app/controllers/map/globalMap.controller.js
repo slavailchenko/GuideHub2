@@ -1,6 +1,7 @@
 (function(){
     'use strict'
-    app.controller('GlobalMap', [ '$scope', '$location', function($scope, $location){
+    app.controller('GlobalMap', [ '$scope', '$location','$rootScope', function($scope, $location, $rootScope){
+        $rootScope.path = $location.path();
         $scope.continent = {
             southAmerica: 'southAmerica',
             northAmerica: 'northAmerica',

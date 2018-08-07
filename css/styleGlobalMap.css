@@ -5,13 +5,13 @@
     fill: none;
 }
 .global_map{
-    background: url(../image/stol.jpg) no-repeat;
-    background-size: 1650px;
+    background: url(../image/map/map4.jpg) no-repeat;
+    -webkit-background-size: 100%;
 }
 .southAmerica{
     stroke-dasharray: 990;
     -webkit-animation: southAmerica 3s linear forwards;
-    fill: rgba(255, 255, 255, 0.5);
+    fill: #77451b73;
     fill-opacity: 0;
 }
 @-webkit-keyframes southAmerica {
@@ -27,7 +27,7 @@
 .northAmerica{
     stroke-dasharray: 2117;
     -webkit-animation: northAmerica 3s linear forwards;
-    fill: rgba(255, 255, 255, 0.5);
+    fill: #77451b73;
     fill-opacity: 0; 
 }
 @-webkit-keyframes northAmerica {
@@ -43,7 +43,7 @@
 .africa{
     stroke-dasharray: 1079;
     -webkit-animation: africa 3s linear forwards;
-    fill: rgba(255, 255, 255, 0.5);
+    fill: #77451b73;
     fill-opacity: 0; 
 }
 @-webkit-keyframes africa {
@@ -59,7 +59,7 @@
 .europa{
     stroke-dasharray: 1438;
     -webkit-animation: europa 3s linear forwards;
-    fill: rgba(255, 255, 255, 0.5);
+    fill: #77451b73;
     fill-opacity: 0; 
 }
 @-webkit-keyframes europa {
@@ -75,7 +75,7 @@
 .asia{
     stroke-dasharray: 3350;
     -webkit-animation: asia 3s linear forwards;
-    fill: rgba(255, 255, 255, 0.5);
+    fill: #77451b73;
     fill-opacity: 0; 
 }
 @-webkit-keyframes asia {
@@ -91,7 +91,7 @@
 .australia{
     stroke-dasharray: 650;
     -webkit-animation: australia 3s linear forwards;
-    fill: rgba(255, 255, 255, 0.5);
+    fill: #77451b73;
     fill-opacity: 0; 
 }
 @-webkit-keyframes australia {
@@ -109,7 +109,7 @@
 /*              CLICK            */
 .southAmerica_cl{
     -webkit-animation: southAmerica_cl 2s linear forwards;
-    fill: rgba(255, 255, 255, 0.5);
+    fill: #77451b73;
     fill-opacity: 0;
 }
 @-webkit-keyframes southAmerica_cl {
@@ -126,7 +126,7 @@
 }
 .northAmerica_cl{
     -webkit-animation: northAmerica_cl 2s linear forwards;
-    fill: rgba(255, 255, 255, 0.5);
+    fill: #77451b73;
     fill-opacity: 0;
 }
 @-webkit-keyframes northAmerica_cl {
@@ -143,7 +143,7 @@
 }
 .africa_cl{
     -webkit-animation: africa_cl 2s linear forwards;
-    fill: rgba(255, 255, 255, 0.5);
+    fill: #77451b73;
     fill-opacity: 0;
 }
 @-webkit-keyframes africa_cl {
@@ -160,7 +160,7 @@
 }
 .asia_cl{
     -webkit-animation: asia_cl 2s linear forwards;
-    fill: rgba(255, 255, 255, 0.5);
+    fill: #77451b73;
     fill-opacity: 0;
 }
 @-webkit-keyframes asia_cl {
@@ -177,7 +177,7 @@
 }
 .europa_cl{
     -webkit-animation: europa_cl 2s linear forwards;
-    fill: rgba(255, 255, 255, 0.5);
+    fill: #77451b73;
     fill-opacity: 0;
 }
 @-webkit-keyframes europa_cl {
@@ -194,7 +194,7 @@
 }
 .australia_cl{
     -webkit-animation: australia_cl 2s linear forwards;
-    fill: rgba(255, 255, 255, 0.5);
+    fill: #77451b73;
     fill-opacity: 0;
 }
 @-webkit-keyframes australia_cl {

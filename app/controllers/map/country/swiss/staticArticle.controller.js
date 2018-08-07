@@ -30,7 +30,7 @@
                     if(data[i].nested[j].user.id === id){
                         data[i].nested[j][mod] = flag;
                     };
-                    for (let x = 0; x < data[i].nested[j].length; x++){
+                    for (let x = 0; x < data[i].nested[j].nested.length; x++){
                         if(data[i].nested[j].nested[x].user.id === id){
                             data[i].nested[j].nested[x][mod] = flag;
                         };
@@ -50,7 +50,7 @@
                     if(data[i].nested[j].id === id){
                         data[i].nested[j][mod] = flag;
                     };
-                    for (let x = 0; x < data[i].nested[j].length; x++){
+                    for (let x = 0; x < data[i].nested[j].nested.length; x++){
                         if(data[i].nested[j].nested[x].id === id){
                             data[i].nested[j].nested[x][mod] = flag;
                         };
@@ -85,7 +85,7 @@
                     for (let j = 0; j < item.nested[x].length; j++){
                         item.nested[x].nested[j].commentMod = flag;
                     }
-                }
+                }   
             })
         }
         function getComment(){

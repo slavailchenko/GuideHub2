@@ -1,12 +1,19 @@
 .swiss-map {
-    stroke: grey;
-    stroke-width: 3px;
-    fill: none;
+    stroke: black;
+    stroke-width: 2px;
+    fill: #77451b73;
+}
+.genf,.wo,.nevshtall,.friburg,.walle,.bern,.ura,.zoloturn,.basel,.tichino,.graubunden,.sanktGallen,.aarau,.turgau,.zurich,.luzern,.obvalden,.nidvalden,.uri,.zug,.shwich,.glarus,.appencel_aus,.appencel_ine,.shavhauzen {
+    transition: 1s;
+}
+.genf:hover,.wo:hover,.nevshtall:hover,.friburg:hover,.walle:hover,.bern:hover,.ura:hover,.zoloturn:hover,.basel:hover,.tichino:hover,.graubunden:hover,.sanktGallen:hover,.aarau:hover,.turgau:hover,.zurich:hover,.luzern:hover,.obvalden:hover,.nidvalden:hover,.uri:hover,.zug:hover,.shwich:hover,.glarus:hover,.appencel_aus:hover,.appencel_ine:hover,.shavhauzen:hover {
+    fill: #77451bc2;
+    stroke: white;
+    transform: scale(1.1)
 }
 .genf{
     stroke-dasharray: 300;
     -webkit-animation: genf 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes genf {
@@ -22,7 +29,6 @@
 .wo{
     stroke-dasharray: 1303;
     -webkit-animation: wo 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes wo {
@@ -38,7 +44,6 @@
 .nevshtall{
     stroke-dasharray: 600;
     -webkit-animation: nevshtall 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes nevshtall {
@@ -54,7 +59,6 @@
 .friburg{
     stroke-dasharray: 800;
     -webkit-animation: friburg 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes friburg {
@@ -70,7 +74,6 @@
 .walle{
     stroke-dasharray: 1500;
     -webkit-animation: walle 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes walle {
@@ -86,7 +89,6 @@
 .bern{
     stroke-dasharray: 1750;
     -webkit-animation: bern 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes bern {
@@ -102,7 +104,6 @@
 .ura{
     stroke-dasharray: 650;
     -webkit-animation: ura 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes ura {
@@ -118,7 +119,6 @@
 .zoloturn{
     stroke-dasharray: 950;
     -webkit-animation: zoloturn 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes zoloturn {
@@ -134,7 +134,6 @@
 .basel{
     stroke-dasharray: 500;
     -webkit-animation: basel 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes basel {
@@ -150,7 +149,6 @@
 .tichino{
     stroke-dasharray: 1000;
     -webkit-animation: tichino 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes tichino {
@@ -166,7 +164,6 @@
 .graubunden{
     stroke-dasharray: 2000;
     -webkit-animation: graubunden 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes graubunden {
@@ -182,7 +179,6 @@
 .sanktGallen{
     stroke-dasharray: 900;
     -webkit-animation: sanktGallen 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes sanktGallen {
@@ -198,7 +194,6 @@
 .aarau{
     stroke-dasharray: 900;
     -webkit-animation: aarau 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes aarau {
@@ -214,7 +209,6 @@
 .turgau{
     stroke-dasharray: 700;
     -webkit-animation: turgau 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes turgau {
@@ -230,7 +224,6 @@
 .zurich{
     stroke-dasharray: 1000;
     -webkit-animation: zurich 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes zurich {
@@ -246,7 +239,6 @@
 .luzern{
     stroke-dasharray: 700;
     -webkit-animation: luzern 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes luzern {
@@ -262,7 +254,6 @@
 .obvalden{
     stroke-dasharray: 400;
     -webkit-animation: obvalden 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes obvalden {
@@ -278,7 +269,6 @@
 .nidvalden{
     stroke-dasharray: 400;
     -webkit-animation: nidvalden 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes nidvalden {
@@ -294,7 +284,6 @@
 .uri{
     stroke-dasharray: 700;
     -webkit-animation: uri 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes uri {
@@ -310,7 +299,6 @@
 .zug{
     stroke-dasharray: 300;
     -webkit-animation: zug 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes zug {
@@ -326,7 +314,6 @@
 .shwich{
     stroke-dasharray: 600;
     -webkit-animation: shwich 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes shwich {
@@ -342,7 +329,6 @@
 .glarus{
     stroke-dasharray: 600;
     -webkit-animation: glarus 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes glarus {
@@ -358,7 +344,6 @@
 .appencel_aus{
     stroke-dasharray: 300;
     -webkit-animation: appencel_aus 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes appencel_aus {
@@ -374,7 +359,6 @@
 .appencel_ine{
     stroke-dasharray: 200;
     -webkit-animation: appencel_ine 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes appencel_ine {
@@ -390,7 +374,6 @@
 .shavhauzen{
     stroke-dasharray: 400;
     -webkit-animation: shavhauzen 3s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes shavhauzen {
@@ -406,7 +389,7 @@
 .genf_lake{
     stroke-dasharray: 600;
     -webkit-animation: genf_lake 3s linear forwards;
-    fill: blue;
+    fill: #0f0fea9c;
     fill-opacity: 0;
 }
 @-webkit-keyframes genf_lake {
@@ -422,7 +405,7 @@
 .nevshtall_lake{
     stroke-dasharray: 300;
     -webkit-animation: nevshtall_lake 3s linear forwards;
-    fill: blue;
+    fill: #0f0fea9c;
     fill-opacity: 0;
 }
 @-webkit-keyframes nevshtall_lake {
@@ -438,7 +421,7 @@
 .luzern_lake{
     stroke-dasharray: 400;
     -webkit-animation: luzern_lake 3s linear forwards;
-    fill: blue;
+    fill: #0f0fea9c;
     fill-opacity: 0;
 }
 @-webkit-keyframes luzern_lake {
@@ -454,7 +437,7 @@
 .zurich_lake{
     stroke-dasharray: 400;
     -webkit-animation: zurich_lake 3s linear forwards;
-    fill: blue;
+    fill: #0f0fea9c;
     fill-opacity: 0;
 }
 @-webkit-keyframes zurich_lake {
@@ -472,7 +455,6 @@
 
 .genf_cl{
     -webkit-animation: genf_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes genf_cl {
@@ -489,7 +471,6 @@
 }
 .wo_cl{
     -webkit-animation: wo_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes wo_cl {
@@ -506,7 +487,6 @@
 }
 .nevshtall_cl{
     -webkit-animation: nevshtall_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes nevshtall_cl {
@@ -523,7 +503,6 @@
 }
 .friburg_cl{
     -webkit-animation: friburg_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes friburg_cl {
@@ -540,7 +519,6 @@
 }
 .walle_cl{
     -webkit-animation: walle_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes walle_cl {
@@ -557,7 +535,6 @@
 }
 .bern_cl{
     -webkit-animation: bern_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes bern_cl {
@@ -574,7 +551,6 @@
 }
 .ura_cl{
     -webkit-animation: ura_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes ura_cl {
@@ -591,7 +567,6 @@
 }
 .zoloturn_cl{
     -webkit-animation: zoloturn_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes zoloturn_cl {
@@ -608,7 +583,6 @@
 }
 .basel_cl{
     -webkit-animation: basel_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes basel_cl {
@@ -625,7 +599,6 @@
 }
 .tichino_cl{
     -webkit-animation: tichino_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes tichino_cl {
@@ -642,7 +615,6 @@
 }
 .graubunden_cl{
     -webkit-animation: graubunden_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes graubunden_cl {
@@ -659,7 +631,6 @@
 }
 .sanktGallen_cl{
     -webkit-animation: sanktGallen_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes sanktGallen_cl {
@@ -676,7 +647,6 @@
 }
 .aarau_cl{
     -webkit-animation: aarau_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes aarau_cl {
@@ -693,7 +663,6 @@
 }
 .turgau_cl{
     -webkit-animation: turgau_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes turgau_cl {
@@ -710,7 +679,6 @@
 }
 .zurich_cl{
     -webkit-animation: zurich_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes zurich_cl {
@@ -727,7 +695,6 @@
 }
 .luzern_cl{
     -webkit-animation: luzern_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes luzern_cl {
@@ -744,7 +711,6 @@
 }
 .obvalden_cl{
     -webkit-animation: obvalden_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes obvalden_cl {
@@ -761,7 +727,6 @@
 }
 .nidvalden_cl{
     -webkit-animation: nidvalden_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes nidvalden_cl {
@@ -778,7 +743,6 @@
 }
 .uri_cl{
     -webkit-animation: uri_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes uri_cl {
@@ -795,7 +759,6 @@
 }
 .zug_cl{
     -webkit-animation: zug_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes zug_cl {
@@ -812,7 +775,6 @@
 }
 .shwich_cl{
     -webkit-animation: shwich_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes shwich_cl {
@@ -829,7 +791,6 @@
 }
 .glarus_cl{
     -webkit-animation: glarus_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes glarus_cl {
@@ -846,7 +807,6 @@
 }
 .appencel_aus_cl{
     -webkit-animation: appencel_aus_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes appencel_aus_cl {
@@ -863,7 +823,6 @@
 }
 .appencel_ine_cl{
     -webkit-animation: appencel_ine_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes appencel_ine_cl {
@@ -880,7 +839,6 @@
 }
 .shavhauzen_cl{
     -webkit-animation: shavhauzen_cl 2s linear forwards;
-    fill: black;
     fill-opacity: 0;
 }
 @-webkit-keyframes shavhauzen_cl {
@@ -897,7 +855,7 @@
 }
 .genf_lake_cl{
     -webkit-animation: genf_lake_cl 2s linear forwards;
-    fill: blue;
+    fill: #0f0fea9c;
     fill-opacity: 0;
 }
 @-webkit-keyframes genf_lake_cl {
@@ -914,7 +872,7 @@
 }
 .nevshtall_lake_cl{
     -webkit-animation: nevshtall_lake_cl 2s linear forwards;
-    fill: blue;
+    fill: #0f0fea9c;
     fill-opacity: 0;
 }
 @-webkit-keyframes nevshtall_lake_cl {
@@ -931,7 +889,7 @@
 }
 .luzern_lake_cl{
     -webkit-animation: luzern_lake_cl 2s linear forwards;
-    fill: blue;
+    fill: #0f0fea9c;
     fill-opacity: 0;
 }
 @-webkit-keyframes luzern_lake_cl {
@@ -948,7 +906,7 @@
 }
 .zurich_lake_cl{
     -webkit-animation: zurich_lake_cl 2s linear forwards;
-    fill: blue;
+    fill: #0f0fea9c;
     fill-opacity: 0;
 }
 @-webkit-keyframes zurich_lake_cl {
