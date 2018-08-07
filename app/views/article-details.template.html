@@ -25,7 +25,7 @@
 				<span class='location'><i class="fa fa-map-marker"></i>{{article.location}}</span>
 				<span class="datetravel"><img src='image/plane.png'">{{article.date_travel | date: 'yyyy-MMM' : 'ru' }}</span>
 				<div class='famous'>
-					<a href="" class="btn btn-warning">Избранное</a>
+					<a href="" class="btn btn-warning" ng-click="addFavorites()">Избранное</a>
 				</div>
 			</div>
      	
@@ -79,7 +79,7 @@
 			<legend align='left'>Комментарии</legend>
 			
 			<div class="form-group">
-				<button ng-click="addLike(article.id)" class="btn btn-danger btn-like"><i class="glyphicon glyphicon-heart"></i> Мне нравится</button>
+				<button ng-click="addLike()" class="btn btn-danger btn-like"><i class="glyphicon glyphicon-heart"></i> Мне нравится</button>
 				<button class="btn btn-primary btn-facebook pull-right"> Facebook</button>
 				<button class="btn btn-info btn-twitter pull-right"> Twitter</button>
 				<button class="btn btn-danger btn-instagramm pull-right"> Instagramm</button>

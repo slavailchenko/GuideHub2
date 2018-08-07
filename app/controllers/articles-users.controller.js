@@ -1,84 +1,11 @@
-// (function(){
-//     'use strict'
-//     app.controller('ArticlesUsers', ['$scope',  function($scope){
-//     	console.log ('articles-users');
-		
-// 		$scope.articles = [
-// 		{
-// 			id: 0,
-// 			title: "Header1",
-// 			user_id: "User1",
-// 			country_travel: 'Швейцария',
-// 			location_travel: "loc1-loc2-loc3",
-// 			image: "image/noname.png",
-// 			annotation: "Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem loremLorem lorem loremLorem lorem lorem Lorem lorem lorem Lorem lorem lorem",
-// 			month_travel: "Aug",
-// 			year_travel: "2017",
-// 			count_likes: 4,
-// 			count_comment: 5,
-// 		},
-// 		{
-// 			id: 0,
-// 			title: "Header2",
-// 			user_id: "User1",
-// 			country_travel: 'Швейцария',
-// 			location_travel: "loc1-loc2-loc3",
-// 			image: "image/noname.png",
-// 			annotation: "Lorem lorem lorem",
-// 			month_travel: "May",
-// 			year_travel: "2017",
-// 			count_likes: 2,
-// 			count_comment: 3,
-// 		},
-// 		{
-// 			id: 0,
-// 			title: "Header3",
-// 			user_id: "User2",
-// 			country_travel: 'Франция',
-// 			location_travel: "loc1-loc2-loc3",
-// 			image: "image/noname.png",
-// 			annotation: "Lorem lorem lorem",
-// 			month_travel: "Sep",
-// 			year_travel: "2017",
-// 			count_likes: 5,
-// 			count_comment: 2,
-// 		},
-// 		{
-// 			id: 0,
-// 			title: "Header4",
-// 			user_id: "User2",
-// 			country_travel: 'Франция',
-// 			location_travel: "loc1-loc2-loc3",
-// 			image: "image/noname.png",
-// 			annotation: "Lorem lorem lorem",
-// 			month_travel: "Sep",
-// 			year_travel: "2017",
-// 			count_likes: 5,
-// 			count_comment: 2,
-// 		},
-// 		{
-// 			id: 0,
-// 			title: "Header5",
-// 			user_id: "User3",
-// 			country_travel: 'Германия',
-// 			location_travel: "loc1-loc2-loc3",
-// 			image: "image/noname.png",
-// 			annotation: "Lorem lorem lorem",
-// 			month_travel: "Sep",
-// 			year_travel: "2017",
-// 			count_likes: 5,
-// 			count_comment: 2,
-// 		}
-// 		];
-
-// console.log ($scope);
-//     }])
-// })()
 
 (function(){
     'use strict'
-    app.controller('ArticlesUsers', ['$scope', 'articles.repository', 'account.repository',
-    	function($scope, articlesRepository, accountRepository){
+    app.controller('ArticlesUsers', ['$scope', '$rootScope', '$location', 'articles.repository', 'account.repository',
+    	function($scope, $rootScope, $location, articlesRepository, accountRepository){
+    	
+    	$rootScope.path = $location.path();
+
     	console.log ('articles-users');
 		
 	articlesRepository.getArticles().then(function(response) {

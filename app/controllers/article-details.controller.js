@@ -1,5 +1,7 @@
-app.controller('ArticleDetails', ['$scope', '$routeParams', 'articles.repository', 'account.repository',
-	function($scope, $routeParams, articlesRepository, accountRepository) {
+app.controller('ArticleDetails', ['$scope', '$rootScope', '$routeParams', 'webApi', '$location', 'articles.repository', 'account.repository',
+	function($scope, $rootScope, $routeParams, webApi, $location, articlesRepository, accountRepository) {
+	$rootScope.path = $location.path();
+
 	var articleId = $routeParams.id,
 		articleModel = {};
 
@@ -21,45 +23,56 @@ app.controller('ArticleDetails', ['$scope', '$routeParams', 'articles.repository
 			 		
 			 		$scope.likesElemets=response.data;
 			 		$scope.likes=response.data.length;
-			 		console.log (response.data);
+			 		console.log (response);
 				}, function(error) {});
-			
 
-	        function addLike (articleId) {
+			
+		   $scope.addFavorites = function  () {
+		   		articlesRepository.addFavorites().then(function (response) {
+		   			
+		   			console.log (response.data);
+
+		   		}, function(error) {});
+		   }
+
+
+	       $scope.addLike = function  () {
         	
-           		if ($scope.autoriz==true) {
+           		if (localStorage.getItem('userId')) {
             
 				    console.log ($scope.likesElemets);
             		
                 	for (let i=0; i<$scope.likes; i++) {
-                		if ($scope.newLike.user_id == $scope.likesElemets[i].user_id) {
-                			alert ('Вы уже поставили лайк') 
-                               	}
-                               	else {
-
-                               		console.log ('else');
-                               		articlesRepository.addLikes(articleId)
-            						.then(function(response){
-            		           							
-            							$scope.newLike= {
-														"article_id": articleId,
-											            "user_id": localStorage.getItem('userId')
-														};
-            								
-										console.log (response.data);
-										if (response.data.errors.length) return;
+                		if (localStorage.getItem('userId') == $scope.likesElemets[i].user_id) {
+                			alert ('Вы уже поставили лайк');
+                			return;
+                               	} 
+                               }; 
+                               	
+                               		let userId = localStorage.getItem('userId'),
+                               		articleId = $routeParams.id;
+                               		console.log ('else', userId, articleId);
+                               		
+                               		articlesRepository.addLikes(articleId, userId).then(function(response){
+            		           			console.log (response);				
+            		// 					$scope.newLike= {
+														// "article_id": articleId,
+											   //          "user_id": localStorage.getItem('userId')
+														// };
+            																		
+										
 									}, function(error) {});
-									}
-                               	}
+									
+                               	
                     		
 		      			 }
     			}
 
-    		$scope.addLike = function()	{
-           	 	addLike(articleId)
-       		 };
+    		// $scope.addLike = function()	{
+      //      	 	addLike(localStorage.getItem('userId'), articleId)
+      //  		 };
 
-    		// console.log ($scope.addLike(articleId));
+    		// // console.log ($scope.addLike(articleId));
 
 			
 	 articlesRepository.getArticleById(articleId).then(function(response) {

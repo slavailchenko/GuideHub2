@@ -227,9 +227,8 @@ fieldset {
     margin-left: 70px;
     margin-top: 20px; 
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
 }
-
-
 
 legend {
     display: block;
@@ -431,3 +430,5 @@ fieldset p {
 .bslider__thumb_active {
   background: rgba(0,0,0,0.87);
 }
+
+

@@ -348,18 +348,18 @@ nav button {
 
  /*Article*/
 
- .articles {
+ .u-articles {
     background: rgba(255,255,255,0.7);
     border-radius: 50px;
     padding: 30px 50px;
     margin-bottom: 50px;
  }
 
- .articles > span {
+ .u-articles > span {
     font-size: 30px;
  }
 
- .articles ol li {
+ .u-articles ol li {
     font-size: 20px;
     padding: 7px;
  }
@@ -411,4 +411,4 @@ nav button {
 
 .login-form {
 
-}   
+}
