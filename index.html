@@ -16,8 +16,8 @@
 </head>
 <body>
     <div>
-        <ng-include ng-if="path !== '/'" src="'app/views/header.template.html'"></ng-include>
-        <ng-include ng-if="path == '/'" src="'app/views/mainHeader.template.html'"></ng-include>
+        <ng-include ng-if="path !== '/'" exact src="'app/views/header.template.html'"></ng-include>
+        <ng-include ng-if="path == '/'" exact src="'app/views/mainHeader.template.html'"></ng-include>
         <ng-view></ng-view>
 
     </div>
@@ -55,9 +55,11 @@
     <script type="text/javascript" src="app/controllers/mainHeader.controller.js"></script>
     <script type="text/javascript" src="app/controllers/tripPlanner.controller.js"></script>
     <script type="text/javascript" src="app/controllers/articleEditor.controller.js"></script>
+
     
     <script type="text/javascript" src="app/controllers/articles-users.controller.js"></script>
     <script type="text/javascript" src="app/controllers/article-details.controller.js"></script>
+
     
     <script type="text/javascript" src="app/constants/webApi.constants.js"></script>
     <script type="text/javascript" src="app/services/account.factory.js"></script>
