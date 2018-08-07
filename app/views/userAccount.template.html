@@ -38,8 +38,36 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="trips col-md-6"><div class="row">
+					<div>
+						<span>Мои поездки</span>
+						<button class="btn btn-success pull-right" ng-click="openTripPlanner()"><i class="fas fa-plus"></i> Добавить поездку</button>
+					</div>
+					<br>
+					<ol class="trips-list">
+						<li ng-repeat="trip in usersTrips track by $index" data-index={{$index}}><span ng-click="showMarkers(trip)">{{trip.title}}</span><button class="btn btn-danger pull-right" ng-click="deleteTrip(trip.id)"><i class="far fa-trash-alt"></i></button></li>
+					</ol></div>
+				</div>
+
+				<div class="u-articles col-md-6"><div class="row">
+					<div>
+						<span>Мои статьи</span>
+						<button class="btn btn-success pull-right" ng-click="openArticleEditor()"><i class="fas fa-plus"></i> Написать статью</button>	
+					</div>
+					
+					<br>
+					<ol class="trips-list">
+						<li ng-repeat="article in writtenArticles"><span ng-click="editArticle(article)">{{article.title}}</span><button class="btn btn-danger pull-right" ng-click="deleteArticle(article)"><i class="far fa-trash-alt"></i></button></li>
+					</ol>
+				</div>
+				</div>
+		
+				
+			</div>
 	
-			<div class="articles row">
+			<!-- <div class="u-articles row">
 				<span>Мои статьи</span>
 				<button class="btn btn-success pull-right" ng-click="openArticleEditor()"><i class="fas fa-plus"></i> Написать статью</button>
 				<br>
@@ -55,7 +83,7 @@
 				<ol class="trips-list col-md-6">
 					<li ng-repeat="trip in usersTrips track by $index" data-index={{$index}}><span ng-click="showMarkers(trip)">{{trip.title}}</span><button class="btn btn-danger pull-right" ng-click="deleteTrip(trip.id)"><i class="far fa-trash-alt"></i></button></li>
 				</ol>
-			</div>
+			</div> -->
 	
 	
 	
