@@ -20,7 +20,7 @@
 	<button ng-click="addTrip()" class="btn btn-success">Сохранить</button>
 	<button ng-click="closeTripPlanner()" class="btn btn-danger">Отменить</button>
 
-	<ui-gmap-google-map center='map.center' zoom='map.zoom' draggable="true" options="options" data-arr="sortedPlaceList">
+	<ui-gmap-google-map center='map.center' zoom='map.zoom' draggable="true" options="options" data-arr="sortedPlaceList" ng-if="showMap">
 		<ui-gmap-markers ng-repeat="m in sortedPlaceList track by $index" 
 						 models="m" 
 						 coords="'self'" 

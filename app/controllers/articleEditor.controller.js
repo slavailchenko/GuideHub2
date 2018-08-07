@@ -12,7 +12,7 @@
     	function($scope, accountRepository, webApi, $rootScope, $location, $uibModal, $uibModalInstance) {
     		$scope.articleName = "Название статьи";
             $scope.articleNameCheck = false;
-
+            console.log($rootScope.sendEditButton);
             $scope.showInput = function() {
                 $scope.articleNameCheck = true;
             }
@@ -34,6 +34,8 @@
                     "images": $rootScope.articleData.images
                 };
                 accountRepository.sendEditedArticle($rootScope.articleData.article_id, data).then(function(response) {
+                    console.log(response);
+                    $uibModalInstance.close(true);
                     accountRepository.getArticles().then(function(response) {
                         $rootScope.writtenArticles = [];
                         for(var i = 0; i < response.data.length; i++) {
@@ -56,7 +58,7 @@
                     "images": $rootScope.articleData.images
                 };
                 
-                accountRepository.sendArticle(data).then(function(response) {
+                accountRepository.sendArticle(data).then(function(response) {$uibModalInstance.close(true);
                     accountRepository.getArticles().then(function(response) {
                         $rootScope.writtenArticles = [];
                         for(var i = 0; i < response.data.length; i++) {

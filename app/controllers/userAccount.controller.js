@@ -1,6 +1,25 @@
 (function(){
     'use strict';
 
+    app.directive('base64', [function () {
+        return {
+            scope: {
+                base64: "="
+            },
+            link: function (scope, element, attributes) {
+                element.bind('change', function (changeEvent) {
+                    var reader = new FileReader();
+                    reader.onload = function (event) {
+                        scope.$apply(function() {
+                            scope.base64 = event.target.result;
+                        });
+                    }
+                    reader.readAsDataURL(changeEvent.target.files[0]);
+                });
+            }
+        }
+    }]);
+
     app.controller('UserAccount', [
         '$scope',
         'account.repository', 
@@ -27,17 +46,23 @@
                     $scope.userPhoto = "./image/unknown.png";
                 }
 
+                if (response.data.email) {
+                    $scope.userEmail = response.data.email;
+                } else {
+                    $scope.userEmail = "Введите ваш Email";
+                }
+
 
             }, function(error) {});
         }
 
 
-    	$scope.check = "trip";
-        $scope.userNameClick = true;
+    	// $scope.check = "trip";
+        
+        
         
         // User's photo 
         $scope.tempInput = "";
-        $scope.aaaa = function() {console.log("aaaaa")}
 
         $scope.changePhoto = function() {
             var input, file, fr, img, result;
@@ -70,20 +95,18 @@
                 canvas.height = 265;
                 var ctx = canvas.getContext("2d");
                 ctx.drawImage(img,0,0,canvas.width,canvas.height);
-                // alert(canvas.toDataURL("image/png"));
             }
-
-            // function write(msg) {
-            //     var p = document.createElement('p');
-            //     p.innerHTML = msg;
-            //     document.body.appendChild(p);
-            // }
-            // console.log(result);
             
+        };
+
+        $scope.triggerFile = function(id) {
+            document.getElementById(id).click();
         };
         // _____________________________
 
         // User name handlers
+        $scope.userNameClick = true;
+
         $scope.userNameClickHandler_1 = function() {
             $scope.userNameClick = false;
         };
@@ -103,6 +126,29 @@
         };
         // __________________
 
+        // User Email handlers
+        $scope.userEmailClick = true;
+
+        $scope.userEmailClickHandler_1 = function() {
+            $scope.userEmailClick = false;
+        };
+
+        $scope.userEmailClickHandler_2 = function(keyEvent) {
+            if (keyEvent.which === 13) {
+                $scope.userEmailClick = true;
+
+                let userId = localStorage.getItem("userId");
+                let obj = {
+                    "email" : $scope.userEmail                  
+                };
+                accountRepository.editUserData(userId, obj).then(function(response) {
+                    console.log(response)
+                    // accountRepository.getUserData(localStorage.getItem("userId")).then(function(response) {}, function(error) {})
+                }, function(error) {});
+            }
+        };
+        // __________________
+
         // Get  User's Email
         
         accountRepository.getUserData(localStorage.getItem('userId')).then(function(response) {
@@ -113,10 +159,20 @@
         // __________________
 
         // Change password/Email
-
+        $scope.checkOpenChangePass = false;
         $scope.openChangePass = function() {
             var form = document.getElementById('change-password-form');
-            form.style.display = "block";
+            if ($scope.checkOpenChangePass === false ) {
+                form.style.display = "block";
+                $scope.checkOpenChangePass = true;
+            } else {
+                form.style.display = "none";
+                $scope.oldPassword = "";
+                $scope.newPassword = "";
+                $scope.newPassword2 = "";
+                $scope.checkOpenChangePass = false;
+            }
+            
         };
 
         $scope.closeChangePass = function() {
@@ -125,18 +181,10 @@
             $scope.oldPassword = "";
             $scope.newPassword = "";
             $scope.newPassword2 = "";
+            $scope.checkOpenChangePass = false;
         };
 
-        $scope.openChangeEmail = function() {
-            var form = document.getElementById('change-email-form');
-            form.style.display = "block";
-        };
-
-        $scope.closeChangeEmail = function() {
-            var form = document.getElementById('change-email-form');
-            form.style.display = "none";
-        };
-
+        
         $scope.oldPassword = "";
         var oldPasswordConfirm = false;
 
@@ -215,18 +263,25 @@
                 });
         }
 
-        $scope.usersTrips = [];
+        $rootScope.usersTrips = [];
+
         accountRepository.getTrips(localStorage.getItem('userId')).then(function(response) {
             for(var i = 0; i < response.data.length; i++) {
-                $scope.usersTrips[i] = response.data[i];
+                $rootScope.usersTrips[i] = response.data[i];
             }
-            console.log($scope.usersTrips);
+            console.log("список поездок", $rootScope.usersTrips);
         });
 
         //delete trip button:
         $scope.deleteTrip = function(tripId) {
             accountRepository.deleteTrip(localStorage.getItem('userId'), tripId).then(function(response) {
-                console.log(response);
+                
+                accountRepository.getTrips(localStorage.getItem('userId')).then(function(response) {
+                    $rootScope.usersTrips = [];
+                    for(var i = 0; i < response.data.length; i++) {
+                        $rootScope.usersTrips[i] = response.data[i];                        
+                    }                    
+                });
             });
         };
 
@@ -252,15 +307,15 @@
             articles_ids: $scope.articles_ids
         };
 
-        $scope.addTrip = function() {
-            if ($scope.savedTrip.articles_ids.length === 0) {
-                alert("Вы ничего не добавили в список");
-                return;
-            }
-            accountRepository.addTrip(localStorage.getItem('userId'), $scope.savedTrip).then(function(response) {
-                console.log(response.data);
-            });
-        }
+        // $scope.addTrip = function() {
+        //     if ($scope.savedTrip.articles_ids.length === 0) {
+        //         alert("Вы ничего не добавили в список");
+        //         return;
+        //     }
+        //     accountRepository.addTrip(localStorage.getItem('userId'), $scope.savedTrip).then(function(response) {
+                
+        //     });
+        // }
 
         $scope.sortedPlaceList = [];
 
@@ -342,7 +397,7 @@
 
         //Редактировать статью по клику на ней
         $scope.editArticle = function(article) {
-            $rootScope.sendEditButton = false;
+            $rootScope.sendEditButton = true;
             $rootScope.articleData.title = article.title;
             $rootScope.articleData.country_travel = article.country_travel;
             $rootScope.articleData.location_travel = article.location_travel;
@@ -360,11 +415,25 @@
         $scope.deleteArticle = function(article) {
             console.log(article);
             accountRepository.deleteArticle(article.id).then(function(response) {
-                console.log(response);
+                accountRepository.getArticles().then(function(response) {
+                    $rootScope.writtenArticles = [];
+                    for(var i = 0; i < response.data.length; i++) {
+                        if (response.data[i].user_id == localStorage.getItem('userId')) {
+                            $rootScope.writtenArticles.push(response.data[i]);
+                        }
+                    }
+                });
             });
         };
 
         $scope.openArticleEditor = function() {
+            $rootScope.sendEditButton = false;
+            $rootScope.articleData.title = "Название статьи";
+            $rootScope.articleData.country_travel = "";
+            $rootScope.articleData.location_travel = "";
+            $rootScope.articleData.date_travel = "";
+            $rootScope.articleData.description = "";
+            $rootScope.articleData.article_id = "";
             var modal = $uibModal.open({
                 templateUrl: 'app/modal/articleEditor.template.html',
                 controller: 'ArticleEditor',

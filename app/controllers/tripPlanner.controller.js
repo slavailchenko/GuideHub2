@@ -9,7 +9,11 @@
         '$location',
         '$uibModal',
         '$uibModalInstance',
-    	function($scope, accountRepository, webApi, $rootScope, $location, $uibModal, $uibModalInstance) {
+        "$timeout",
+    	function($scope, accountRepository, webApi, $rootScope, $location, $uibModal, $uibModalInstance, $timeout) {
+            $timeout(function () {
+                $scope.showMap = true;
+            });
 
             $scope.tripNameClick = true;
 
@@ -77,6 +81,12 @@
 
                 accountRepository.addTrip(localStorage.getItem('userId'), savedTrip).then(function(response) {
                     console.log(response.data);
+                    accountRepository.getTrips(localStorage.getItem('userId')).then(function(response) {
+                        for(var i = 0; i < response.data.length; i++) {
+                            $rootScope.usersTrips[i] = response.data[i];
+                        }
+                        console.log($rootScope.usersTrips);
+                    });
                 });
                 $uibModalInstance.close(true);
             }

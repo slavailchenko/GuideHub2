@@ -3,55 +3,50 @@
 			<div class="first-row row">
 				<div class="col-md-3">
 					<form ng-submit="changePhoto()">
-						<input type="file" id="userPhoto" multiple accept="image/*" name="img">
-						<button type="submit">Submit</button><br>
-						<img src="{{userPhoto}}">
-						<canvas id="canvas"></canvas>
-	
+						<!-- <input type="file" id="userPhoto" multiple accept="image/*" name="img"> -->
+						<!-- <button type="submit">Submit</button><br> -->
+						<!-- <img src="{{userPhoto}}"> -->
+						<!-- <canvas id="canvas"></canvas> -->
+						<input type="file" id="image-file" accept="image/*" name="img" hidden base64="userPhoto" style="display: none;">
+						<img src="{{userPhoto}}" ng-click="triggerFile('image-file')">
 					</form>
 				</div>
 				<div class="user-name col-md-4">
 					<span ng-show="userNameClick" ng-click="userNameClickHandler_1()">{{userName}}</span>
 					<input type="text" ng-hide="userNameClick" ng-model="userName" ng-keypress="userNameClickHandler_2($event)">
-					<span>{{userEmail}}</span>
+
+					<span ng-show="userEmailClick" ng-click="userEmailClickHandler_1()">{{userEmail}}</span>
+					<input type="email" ng-hide="userEmailClick" ng-model="userEmail" ng-keypress="userEmailClickHandler_2($event)">
 				</div>
 				<div class="change-user-data col-md-5">
-					<div class="row">
-						<div class="change-password col-md-6">
-							<button class="btn btn-primary" ng-click="openChangePass()">Изменить пароль</button><br>
-							<form id="change-password-form">
-								<input id="oldPassword" type="text" placeholder="Введите старый пароль" ng-model="oldPassword" ng-blur="checkOldPassword()" autocomplete="off"><br>
-								<input id="newPassword" type="text" placeholder="Введите новый пароль" ng-model="newPassword" autocomplete="off"><br>
-								<input id="newPassword2" type="text" placeholder="Повторите новый пароль" ng-model="newPassword2" ng-blur="checkNewPassword()" autocomplete="off"><br>
-								<button class="btn btn-success" ng-click="changePassword()">Подтвердить</button>
-								<button class="btn btn-danger" ng-click="closeChangePass()">Отменить</button>
-							</form>
-						</div>
-						<div class="change-email col-md-6">
-							<button class="btn btn-primary" ng-click="openChangeEmail()">Изменить Email</button><br>
-							<form id="change-email-form" ng-submit="changeEmail()">
-								<input type="email" placeholder="Введите новый Email" required ng-model="userEmail">
-								<button class="btn btn-success" type="submit">Подтвердить</button>
-								<button class="btn btn-danger" ng-click="closeChangeEmail()">Отменить</button>
-							</form>
-						</div>
-					</div>
+					<div class="change-password col-md-6">
+						<button class="btn btn-primary" ng-click="openChangePass()">Изменить пароль</button><br>
+						<form id="change-password-form">
+							<input id="oldPassword" type="text" placeholder="Введите старый пароль" ng-model="oldPassword" ng-blur="checkOldPassword()" autocomplete="off"><br>
+							<input id="newPassword" type="text" placeholder="Введите новый пароль" ng-model="newPassword" autocomplete="off"><br>
+							<input id="newPassword2" type="text" placeholder="Повторите новый пароль" ng-model="newPassword2" ng-blur="checkNewPassword()" autocomplete="off"><br>
+							<button class="btn btn-success" ng-click="changePassword()">Подтвердить</button>
+							<button class="btn btn-danger" ng-click="closeChangePass()">Отменить</button>
+						</form>
+					</div>					
 				</div>
 			</div>
 
 			<div class="row">
-				<div class="trips col-md-6"><div class="row">
-					<div>
-						<span>Мои поездки</span>
-						<button class="btn btn-success pull-right" ng-click="openTripPlanner()"><i class="fas fa-plus"></i> Добавить поездку</button>
+				<div class="trips col-md-5">
+					<div class="row">
+						<div>
+							<span>Мои поездки</span>
+							<button class="btn btn-success pull-right" ng-click="openTripPlanner()"><i class="fas fa-plus"></i> Добавить поездку</button>
+						</div>
+						<br>
+						<ol class="trips-list">
+							<li ng-repeat="trip in usersTrips track by $index" data-index={{$index}}><span ng-click="showMarkers(trip)">{{trip.title}}</span><button class="btn btn-danger pull-right" ng-click="deleteTrip(trip.id)"><i class="far fa-trash-alt"></i></button></li>
+						</ol>
 					</div>
-					<br>
-					<ol class="trips-list">
-						<li ng-repeat="trip in usersTrips track by $index" data-index={{$index}}><span ng-click="showMarkers(trip)">{{trip.title}}</span><button class="btn btn-danger pull-right" ng-click="deleteTrip(trip.id)"><i class="far fa-trash-alt"></i></button></li>
-					</ol></div>
 				</div>
 
-				<div class="u-articles col-md-6"><div class="row">
+				<div class="u-articles col-md-7"><div class="row">
 					<div>
 						<span>Мои статьи</span>
 						<button class="btn btn-success pull-right" ng-click="openArticleEditor()"><i class="fas fa-plus"></i> Написать статью</button>	
@@ -59,38 +54,17 @@
 					
 					<br>
 					<ol class="trips-list">
-						<li ng-repeat="article in writtenArticles"><span ng-click="editArticle(article)">{{article.title}}</span><button class="btn btn-danger pull-right" ng-click="deleteArticle(article)"><i class="far fa-trash-alt"></i></button></li>
+						<li ng-repeat="article in writtenArticles"><span>{{article.title}}</span><button class="btn btn-danger pull-right" ng-click="deleteArticle(article)"><i class="far fa-trash-alt"></i></button><button class="btn btn-primary pull-right" ng-click="editArticle(article)"><i class="far fa-edit"></i></button></li>
 					</ol>
 				</div>
 				</div>
 		
-				
 			</div>
 	
-			<!-- <div class="u-articles row">
-				<span>Мои статьи</span>
-				<button class="btn btn-success pull-right" ng-click="openArticleEditor()"><i class="fas fa-plus"></i> Написать статью</button>
-				<br>
-				<ol class="trips-list col-md-6">
-					<li ng-repeat="article in writtenArticles"><span ng-click="editArticle(article)">{{article.title}}</span><button class="btn btn-danger pull-right" ng-click="deleteArticle(article)"><i class="far fa-trash-alt"></i></button></li>
-				</ol>
-			</div>
-	
-			<div class="trips row">
-				<span>Мои поездки</span>
-				<button class="btn btn-success pull-right" ng-click="openTripPlanner()"><i class="fas fa-plus"></i> Добавить поездку</button>
-				<br>
-				<ol class="trips-list col-md-6">
-					<li ng-repeat="trip in usersTrips track by $index" data-index={{$index}}><span ng-click="showMarkers(trip)">{{trip.title}}</span><button class="btn btn-danger pull-right" ng-click="deleteTrip(trip.id)"><i class="far fa-trash-alt"></i></button></li>
-				</ol>
-			</div> -->
-	
-	
-	
-			<!-- <ui-gmap-google-map center='map.center' zoom='map.zoom' draggable="true" options="options" data-arr="sortedPlaceList">
+			<ui-gmap-google-map center='map.center' zoom='map.zoom' draggable="true" options="options" data-arr="sortedPlaceList">
 				<ui-gmap-markers ng-repeat="m in sortedPlaceList track by $index" models="m" coords="'self'" options="{labelClass:'marker_labels', labelAnchor:'12 60', labelContent: m[0].title}" icon="{url: '../../image/resize-marker.png'}">
 				</ui-gmap-markers>
-			</ui-gmap-google-map> -->
+			</ui-gmap-google-map>
 	
 		</div>
 	</div>

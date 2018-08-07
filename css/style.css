@@ -86,6 +86,14 @@ header:hover {
     transition: 0.5s;
 }
 
+header .main-menu .logOut {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
 .main-menu button {
     margin-left: 30px;
 }
@@ -221,7 +229,7 @@ nav button {
 
  .first-row {
     padding: 30px;
-    padding-bottom: 0;
+    padding-bottom: 30px;
     margin-bottom: 50px;
     background: rgba(255,255,255,0.7);
     border-radius: 50px;
@@ -383,6 +391,14 @@ nav button {
 
  .article-editor textarea {
     margin-top: 30px; 
+ }
+
+ .article-editor-photos {
+    text-align: left;
+ }
+
+ .article-editor img {
+    width: 220px;    
  }
 
 
