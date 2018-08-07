@@ -1,0 +1,31 @@
+<div class="trip-planner">
+	<div class="row">
+		<div class="trip col-md-6">
+			<h3>
+				<span ng-show="tripNameClick" ng-click="tripNameClickHandler_1()" ng-model="tripName">{{tripName}}</span>
+				<input type="text" ng-hide="tripNameClick" ng-model="tripName" ng-keypress="tripNameClickHandler_2($event)">
+			</h3>
+			<ol id="plane-trip-list1">
+				
+			</ol>
+		</div>
+		<div class="favourites col-md-6">
+			<h3>Избранное</h3>
+			<ol id="plane-trip-list2">
+				<li ng-repeat="place in unsortedPlacesList track by $index" data-index={{$index}}>{{place[0].title}}</li>
+			</ol>
+		</div>
+	</div>
+	
+	<button ng-click="addTrip()" class="btn btn-success">Сохранить</button>
+	<button ng-click="closeTripPlanner()" class="btn btn-danger">Отменить</button>
+
+	<ui-gmap-google-map center='map.center' zoom='map.zoom' draggable="true" options="options" data-arr="sortedPlaceList">
+		<ui-gmap-markers ng-repeat="m in sortedPlaceList track by $index" 
+						 models="m" 
+						 coords="'self'" 
+						 options="{labelClass:'marker_labels', labelAnchor:'12 60', labelContent: m[0].title}" 
+						 icon="{url: '../../image/resize-marker.png'}">
+		</ui-gmap-markers>
+	</ui-gmap-google-map>
+</div>

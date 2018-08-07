@@ -1,0 +1,27 @@
+<div class="article-editor row">
+	<form ng-submit="sendArticle()">
+		<div class="article-title">
+			<span class="article-title-span" ng-click="showInput()" ng-model="articleData.title" ng-show="!articleNameCheck">{{articleData.title}}</span>
+			<input class="article-title-input" type="text" placeholder="Название статьи" ng-model="articleData.title" ng-keypress="hideInput($event)" ng-show="articleNameCheck">
+		</div>
+		<div class="col-md-4">
+			<span>Страна</span><br>
+			<input type="text" name="country" ng-model="articleData.country_travel">
+		</div>
+		<div class="col-md-4">
+			<span>Место</span><br>
+			<input type="text" name="location" ng-model="articleData.location_travel">
+		</div>
+		<div class="col-md-4">
+			<span>Дата поездки</span><br>
+			<input type="date" name="date-travel" ng-model="articleData.date_travel">
+		</div>
+		<br>
+		
+		<textarea rows="20" cols="100" ng-model="articleData.description"></textarea><br>
+		<!-- <textarea class="col-md-10" rows="20" cols="100" ng-model="content" ckeditor="editorOptions">{{content}}</textarea><br> -->
+		<button class="btn btn-success" type="submit" ng-show="!sendEditButton">Отправить статью</button>
+		<button class="btn btn-success" type="button" ng-click="sendEditedArticle()" ng-show="sendEditButton">Отредактировать</button>
+		<button class="btn btn-danger" type="button" ng-click="closeArticleEditor()">Отменить</button>
+	</form>
+</div>

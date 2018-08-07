@@ -1,0 +1,68 @@
+<div class="container-fluid articles-users">
+	<div class='nav-brand'>
+    <span>
+       <h2 class="page-header"> <img src='image/icon-travel.png'>
+       Статьи пользователей</h2>
+    </span>
+  </div>
+	
+  <div class="articles">
+    <div class="row form-group subheader">
+
+          <div class="col-xs-9 col-md-9">
+
+          	<label>Выберите страну</label>
+          	<input type="text" placeholder="Страна" class="form-control" ng-model="searchString">
+          </div>
+
+	<div class="col-xs-3 col-md-3">
+		<button type="button" class="btn btn-primary pull-right" ng-click="addArticle()">Добавить статью</button>
+	</div>
+
+    </div>
+          	
+  		<div class='list-articles'>
+  		<div class="block-articles" ng-repeat="article in articles | filter: searchString track by $index"
+  		ng-style="{'background': '{{background[$index]}}', 'background-size':'cover'}">
+  		  			   
+	        <div class="text-right user">
+	          <span class="glyphicon glyphicon-user"></span>
+	          <em>{{user[$index]}}</em>
+	        </div>
+        
+	        <div class='block-left'>
+	         
+	          <div class="count">
+	            <span class='countlikes'><i class="fa fa-heart fa-2x"></i>{{article.count_likes}}</span>
+	            <span class='countcomment'><i class="fa fa-comment fa-2x"></i>{{article.count_comment}}</span>
+	            <span class="datetravel" ><i class="fa fa-plane fa-2x"></i>
+	             
+	              {{date_travel[$index]}}
+	             
+	            </span
+	          </div>
+	          
+	        </div>
+  			
+		        <div class="block-article">
+		         <span class="lead title">{{article.title}}</span>
+		          <div class="location"> 
+		          	<span class='country'><i class="fa fa-location-arrow"></i> 
+		          	{{article.country_travel}} </span>
+		          	
+		          	<span class="location_of"><i class="fa fa-map-marker"></i>
+		          	{{article.location}}</span>
+		          
+		          </div>
+		          <div class="annotation">{{article.annotation}}</div>
+		          <a href="#/articles/{{article.id}}" class="btn-content">Подробнее</a>
+		        </div>
+  			
+  	
+
+  			</div>
+  			
+  		</div>
+  	</div>
+  		  	
+ </div>

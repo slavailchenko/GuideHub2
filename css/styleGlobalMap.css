@@ -1,0 +1,211 @@
+
+.global-map {
+    stroke: black;
+    stroke-width: 3px;
+    fill: none;
+}
+.global_map{
+    background: url(../image/stol.jpg) no-repeat;
+    background-size: 1650px;
+}
+.southAmerica{
+    stroke-dasharray: 990;
+    -webkit-animation: southAmerica 3s linear forwards;
+    fill: rgba(255, 255, 255, 0.5);
+    fill-opacity: 0;
+}
+@-webkit-keyframes southAmerica {
+    0%{
+        stroke-dashoffset: 977;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.northAmerica{
+    stroke-dasharray: 2117;
+    -webkit-animation: northAmerica 3s linear forwards;
+    fill: rgba(255, 255, 255, 0.5);
+    fill-opacity: 0; 
+}
+@-webkit-keyframes northAmerica {
+    0%{
+        stroke-dashoffset: 2112;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.africa{
+    stroke-dasharray: 1079;
+    -webkit-animation: africa 3s linear forwards;
+    fill: rgba(255, 255, 255, 0.5);
+    fill-opacity: 0; 
+}
+@-webkit-keyframes africa {
+    0%{
+        stroke-dashoffset: 1079;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.europa{
+    stroke-dasharray: 1438;
+    -webkit-animation: europa 3s linear forwards;
+    fill: rgba(255, 255, 255, 0.5);
+    fill-opacity: 0; 
+}
+@-webkit-keyframes europa {
+    0%{
+        stroke-dashoffset: 1432;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.asia{
+    stroke-dasharray: 3350;
+    -webkit-animation: asia 3s linear forwards;
+    fill: rgba(255, 255, 255, 0.5);
+    fill-opacity: 0; 
+}
+@-webkit-keyframes asia {
+    0%{
+        stroke-dashoffset: 3350;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.australia{
+    stroke-dasharray: 650;
+    -webkit-animation: australia 3s linear forwards;
+    fill: rgba(255, 255, 255, 0.5);
+    fill-opacity: 0; 
+}
+@-webkit-keyframes australia {
+    0% {
+        stroke-dashoffset: 650;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+
+
+/*              CLICK            */
+.southAmerica_cl{
+    -webkit-animation: southAmerica_cl 2s linear forwards;
+    fill: rgba(255, 255, 255, 0.5);
+    fill-opacity: 0;
+}
+@-webkit-keyframes southAmerica_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 990;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 520;
+    } 100% {
+        stroke-dashoffset: 990;
+        stroke-dasharray: 990;
+    }
+}
+.northAmerica_cl{
+    -webkit-animation: northAmerica_cl 2s linear forwards;
+    fill: rgba(255, 255, 255, 0.5);
+    fill-opacity: 0;
+}
+@-webkit-keyframes northAmerica_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 2117;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1500;
+    } 100% {
+        stroke-dashoffset: 2117;
+        stroke-dasharray: 2117;
+    }
+}
+.africa_cl{
+    -webkit-animation: africa_cl 2s linear forwards;
+    fill: rgba(255, 255, 255, 0.5);
+    fill-opacity: 0;
+}
+@-webkit-keyframes africa_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1079;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 650;
+    } 100% {
+        stroke-dashoffset: 1079;
+        stroke-dasharray: 1079;
+    }
+}
+.asia_cl{
+    -webkit-animation: asia_cl 2s linear forwards;
+    fill: rgba(255, 255, 255, 0.5);
+    fill-opacity: 0;
+}
+@-webkit-keyframes asia_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 3350;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1400;
+    } 100% {
+        stroke-dashoffset: 3350;
+        stroke-dasharray: 3350;
+    }
+}
+.europa_cl{
+    -webkit-animation: europa_cl 2s linear forwards;
+    fill: rgba(255, 255, 255, 0.5);
+    fill-opacity: 0;
+}
+@-webkit-keyframes europa_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1438;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 850;
+    } 100% {
+        stroke-dashoffset: 1438;
+        stroke-dasharray: 1438;
+    }
+}
+.australia_cl{
+    -webkit-animation: australia_cl 2s linear forwards;
+    fill: rgba(255, 255, 255, 0.5);
+    fill-opacity: 0;
+}
+@-webkit-keyframes australia_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 650;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 100% {
+        stroke-dashoffset: 650;
+        stroke-dasharray: 650;
+    }
+}

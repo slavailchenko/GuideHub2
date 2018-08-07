@@ -1,0 +1,1229 @@
+.europe-map {
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+.rus{
+    stroke-dasharray: 2162;
+    -webkit-animation: rus 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes rus {
+    0%{
+        stroke-dashoffset: 2162; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.ukr{
+    stroke-dasharray: 1200;
+    -webkit-animation: ukr 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes ukr {
+    0%{
+        stroke-dashoffset: 1200; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.bel{
+    stroke-dasharray: 1000;
+    -webkit-animation: bel 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes bel {
+    0%{
+        stroke-dashoffset: 1000; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.est{
+    stroke-dasharray: 400;
+    -webkit-animation: est 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes est {
+    0%{
+        stroke-dashoffset: 400; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.lat{
+    stroke-dasharray: 400;
+    -webkit-animation: lat 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes lat {
+    0%{
+        stroke-dashoffset: 400; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.lit{
+    stroke-dasharray: 400;
+    -webkit-animation: lit 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes lit {
+    0%{
+        stroke-dashoffset: 400; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.pol{
+    stroke-dasharray: 600;
+    -webkit-animation: pol 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes pol {
+    0%{
+        stroke-dashoffset: 600; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.mol{
+    stroke-dasharray: 300;
+    -webkit-animation: mol 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes mol {
+    0%{
+        stroke-dashoffset: 300; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.roma{
+    stroke-dasharray: 400;
+    -webkit-animation: roma 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes roma {
+    0%{
+        stroke-dashoffset: 400; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.bulg{
+    stroke-dasharray: 400;
+    -webkit-animation: bulg 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes bulg {
+    0%{
+        stroke-dashoffset: 400; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.serb{
+    stroke-dasharray: 300;
+    -webkit-animation: serb 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes serb {
+    0%{
+        stroke-dashoffset: 300; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.gre{
+    stroke-dasharray: 550;
+    -webkit-animation: gre 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes gre {
+    0%{
+        stroke-dashoffset: 550; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.maked{
+    stroke-dasharray: 300;
+    -webkit-animation: maked 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes maked {
+    0%{
+        stroke-dashoffset: 300; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.slovak{
+    stroke-dasharray: 200;
+    -webkit-animation: slovak 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes slovak {
+    0%{
+        stroke-dashoffset: 200; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.hung{
+    stroke-dasharray: 300;
+    -webkit-animation: hung 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes hung {
+    0%{
+        stroke-dashoffset: 300; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.cze{
+    stroke-dasharray: 300;
+    -webkit-animation: cze 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes cze {
+    0%{
+        stroke-dashoffset: 300; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.aust{
+    stroke-dasharray: 300;
+    -webkit-animation: aust 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes aust {
+    0%{
+        stroke-dashoffset: 300; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.slowenia{
+    stroke-dasharray: 150;
+    -webkit-animation: slowenia 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes slowenia {
+    0%{
+        stroke-dashoffset: 150; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.croat{
+    stroke-dasharray: 200;
+    -webkit-animation: croat 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes croat {
+    0%{
+        stroke-dashoffset: 200; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+
+.BandG{
+    stroke-dasharray: 200;
+    -webkit-animation: BandG 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes BandG {
+    0%{
+        stroke-dashoffset: 200; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.monte{
+    stroke-dasharray: 100;
+    -webkit-animation: monte 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes monte {
+    0%{
+        stroke-dashoffset: 100; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.alb{
+    stroke-dasharray: 150;
+    -webkit-animation: alb 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes alb {
+    0%{
+        stroke-dashoffset: 150; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.swiss{
+    stroke-dasharray: 200;
+    -webkit-animation: swiss 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes swiss {
+    0%{
+        stroke-dashoffset: 200; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.germ{
+    stroke-dasharray: 850;
+    -webkit-animation: germ 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes germ {
+    0%{
+        stroke-dashoffset: 850; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.nether{
+    stroke-dasharray: 200;
+    -webkit-animation: nether 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes nether {
+    0%{
+        stroke-dashoffset: 200; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.belg{
+    stroke-dasharray: 200;
+    -webkit-animation: belg 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes belg {
+    0%{
+        stroke-dashoffset: 200; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.lux{
+    stroke-dasharray: 50;
+    -webkit-animation: lux 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes lux {
+    0%{
+        stroke-dashoffset: 50; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.ital{
+    stroke-dasharray: 950;
+    -webkit-animation: ital 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes ital {
+    0%{
+        stroke-dashoffset: 950; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.fran{
+    stroke-dasharray: 950;
+    -webkit-animation: fran 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes fran {
+    0%{
+        stroke-dashoffset: 950; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.spain{
+    stroke-dasharray: 850;
+    -webkit-animation: spain 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes spain {
+    0%{
+        stroke-dashoffset: 850; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.port{
+    stroke-dasharray: 750;
+    -webkit-animation: port 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes port {
+    0%{
+        stroke-dashoffset: 750; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.turck{
+    stroke-dasharray: 200;
+    -webkit-animation: turck 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes turck {
+    0%{
+        stroke-dashoffset: 200; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.fin{
+    stroke-dasharray: 1000;
+    -webkit-animation: fin 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes fin {
+    0%{
+        stroke-dashoffset: 1000; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.sveden{
+    stroke-dasharray: 1000;
+    -webkit-animation: sveden 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes sveden {
+    0%{
+        stroke-dashoffset: 1000; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.norway{
+    stroke-dasharray: 2500;
+    -webkit-animation: norway 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes norway {
+    0%{
+        stroke-dashoffset: 2500; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.UK{
+    stroke-dasharray: 1200;
+    -webkit-animation: UK 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes UK {
+    0%{
+        stroke-dashoffset: 1200; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.irland{
+    stroke-dasharray: 500;
+    -webkit-animation: irland 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes irland {
+    0%{
+        stroke-dashoffset: 500; 
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+
+/* CLICK */
+.rus_cl{
+    -webkit-animation: rus_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes rus_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 2138;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1300;
+    } 100% {
+        stroke-dashoffset: 2500;
+        stroke-dasharray: 2500;
+    }
+}
+.ukr_cl{
+    -webkit-animation: ukr_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes ukr_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1200;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 750;
+    } 100% {
+        stroke-dashoffset: 1200;
+        stroke-dasharray: 1200;
+    }
+}
+.bel_cl{
+    -webkit-animation: bel_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes bel_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1000;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 600;
+    } 100% {
+        stroke-dashoffset: 1000;
+        stroke-dasharray: 1000;
+    }
+}
+.est_cl{
+    -webkit-animation: bel_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes bel_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 250;
+    } 100% {
+        stroke-dashoffset: 400;
+        stroke-dasharray: 400;
+    }
+}
+.lat_cl{
+    -webkit-animation: lat_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes lat_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 250;
+    } 100% {
+        stroke-dashoffset: 400;
+        stroke-dasharray: 400;
+    }
+}
+.lit_cl{
+    -webkit-animation: lit_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes lit_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 250;
+    } 100% {
+        stroke-dashoffset: 400;
+        stroke-dasharray: 400;
+    }
+}
+.pol_cl{
+    -webkit-animation: pol_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes pol_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 600;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 350;
+    } 100% {
+        stroke-dashoffset: 600;
+        stroke-dasharray: 600;
+    }
+}
+.mol_cl{
+    -webkit-animation: mol_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes mol_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 180;
+    } 100% {
+        stroke-dashoffset: 300;
+        stroke-dasharray: 300;
+    }
+}
+.roma_cl{
+    -webkit-animation: roma_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes roma_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 250;
+    } 100% {
+        stroke-dashoffset: 400;
+        stroke-dasharray: 400;
+    }
+}
+.bulg_cl{
+    -webkit-animation: bulg_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes bulg_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 250;
+    } 100% {
+        stroke-dashoffset: 400;
+        stroke-dasharray: 400;
+    }
+}
+.serb_cl{
+    -webkit-animation: serb_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes serb_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 180;
+    } 100% {
+        stroke-dashoffset: 300;
+        stroke-dasharray: 300;
+    }
+}
+.gre_cl{
+    -webkit-animation: gre_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes gre_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 550;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 280;
+    } 100% {
+        stroke-dashoffset: 550;
+        stroke-dasharray: 550;
+    }
+}
+.maked_cl{
+    -webkit-animation: maked_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes maked_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 180;
+    } 100% {
+        stroke-dashoffset: 300;
+        stroke-dasharray: 300;
+    }
+}
+.slovak_cl{
+    -webkit-animation: slovak_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes slovak_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 120;
+    } 100% {
+        stroke-dashoffset: 200;
+        stroke-dasharray: 200;
+    }
+}
+.hung_cl{
+    -webkit-animation: hung_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes hung_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 180;
+    } 100% {
+        stroke-dashoffset: 300;
+        stroke-dasharray: 300;
+    }
+}
+.cze_cl{
+    -webkit-animation: cze_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes cze_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 180;
+    } 100% {
+        stroke-dashoffset: 300;
+        stroke-dasharray: 300;
+    }
+}
+.aust_cl{
+    -webkit-animation: aust_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes aust_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 180;
+    } 100% {
+        stroke-dashoffset: 300;
+        stroke-dasharray: 300;
+    }
+}
+.slowenia_cl{
+    -webkit-animation: slowenia_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes slowenia_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 120;
+    } 100% {
+        stroke-dashoffset: 200;
+        stroke-dasharray: 200;
+    }
+}
+.croat_cl{
+    -webkit-animation: croat_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes croat_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 150;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 80;
+    } 100% {
+        stroke-dashoffset: 150;
+        stroke-dasharray: 150;
+    }
+}
+.BandG_cl{
+    -webkit-animation: BandG_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes BandG_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 120;
+    } 100% {
+        stroke-dashoffset: 200;
+        stroke-dasharray: 200;
+    }
+}
+.monte_cl{
+    -webkit-animation: monte_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes monte_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 100;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 70;
+    } 100% {
+        stroke-dashoffset: 100;
+        stroke-dasharray: 100;
+    }
+}
+.alb_cl{
+    -webkit-animation: alb_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes alb_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 150;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 90;
+    } 100% {
+        stroke-dashoffset: 150;
+        stroke-dasharray: 150;
+    }
+}
+.swiss_cl{
+    -webkit-animation: swiss_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes swiss_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 120;
+    } 100% {
+        stroke-dashoffset: 200;
+        stroke-dasharray: 200;
+    }
+}
+.germ_cl{
+    -webkit-animation: germ_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes germ_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 850;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 500;
+    } 100% {
+        stroke-dashoffset: 850;
+        stroke-dasharray: 850;
+    }
+}
+.nether_cl{
+    -webkit-animation: nether_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes nether_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 120;
+    } 100% {
+        stroke-dashoffset: 200;
+        stroke-dasharray: 200;
+    }
+}
+.belg_cl{
+    -webkit-animation: belg_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes belg_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 120;
+    } 100% {
+        stroke-dashoffset: 200;
+        stroke-dasharray: 200;
+    }
+}
+.lux_cl{
+    -webkit-animation: lux_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes lux_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 50;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 30;
+    } 100% {
+        stroke-dashoffset: 50;
+        stroke-dasharray: 50;
+    }
+}
+.ital_cl{
+    -webkit-animation: ital_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes ital_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 950;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 550;
+    } 100% {
+        stroke-dashoffset: 950;
+        stroke-dasharray: 950;
+    }
+}
+.fran_cl{
+    -webkit-animation: fran_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes fran_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 950;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 550;
+    } 100% {
+        stroke-dashoffset: 950;
+        stroke-dasharray: 950;
+    }
+}
+.spain_cl{
+    -webkit-animation: spain_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes spain_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 850;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 450;
+    } 100% {
+        stroke-dashoffset: 850;
+        stroke-dasharray: 850;
+    }
+}
+.port_cl{
+    -webkit-animation: port_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes port_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 750;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 350;
+    } 100% {
+        stroke-dashoffset: 750;
+        stroke-dasharray: 750;
+    }
+}
+.turck_cl{
+    -webkit-animation: turck_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes turck_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 120;
+    } 100% {
+        stroke-dashoffset: 200;
+        stroke-dasharray: 200;
+    }
+}
+.fin_cl{
+    -webkit-animation: fin_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes fin_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1000;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 650;
+    } 100% {
+        stroke-dashoffset: 1000;
+        stroke-dasharray: 1000;
+    }
+}
+.sveden_cl{
+    -webkit-animation: sveden_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes sveden_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1000;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 650;
+    } 100% {
+        stroke-dashoffset: 1000;
+        stroke-dasharray: 1000;
+    }
+}
+.norway_cl{
+    -webkit-animation: norway_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes norway_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 2500;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1450;
+    } 100% {
+        stroke-dashoffset: 2500;
+        stroke-dasharray: 2500;
+    }
+}
+.UK_cl{
+    -webkit-animation: UK_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes UK_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1200;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 750;
+    } 100% {
+        stroke-dashoffset: 1200;
+        stroke-dasharray: 1200;
+    }
+}
+.irland_cl{
+    -webkit-animation: irland_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes irland_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 500;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 100% {
+        stroke-dashoffset: 500;
+        stroke-dasharray: 500;
+    }
+}

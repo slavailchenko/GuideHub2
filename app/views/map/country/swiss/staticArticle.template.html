@@ -1,0 +1,76 @@
+<div style="font-size: 20px">
+    <div class="header-article-city" ng-parallax pattern="'./image/static-article/basel2.JPG'" speed="3" reverse="true">
+        <h1>{{articles.city}}</h1>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid officiis sequi </h2>
+    </div>
+    <div class="container article-city">
+        <div style="margin: 80px 0 80px 0;border: 1px solid black;padding: 20px;text-align: center;border-radius: 50px;">
+            <span>{{articles.city_description}}</span>
+        </div>
+    </div>
+    <div class="header-article-region" ng-parallax pattern="'./image/static-article/baselRegion.png'" speed="3" reverse="true">
+        <h1>{{articles.region}}</h1>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid officiis sequi </h2>
+    </div>
+    <div class="container article-region">
+        <div style="margin: 80px 0 80px 0;border: 1px solid black;padding: 20px;text-align: center;border-radius: 50px;">
+            <span >{{articles.region_description}}</span>
+        </div> 
+    </div>
+
+    <div class="container main_comment">
+        <div class="add-comment container">
+            <textarea name="addComment" ng-model="newComment.content"></textarea>
+            <span class="buttonHover" ng-click="addComment()"><i class="glyphicon glyphicon-plus" ></i>Add Comment</span>
+        </div>
+        <div class="container comments-article">
+            <div class="firstComment">
+                <div class="comment-article" ng-repeat="comment in comments"> 
+                    <div class="user_comment">
+                        <img ng-src="http://node3.fe.a-level.com.ua/{{comment.user.photo}}" ng-if="comment.user.photo"alt="NO Foto" style="width: 100px; height: 100px; border-radius: 75px 75px">
+                        <img ng-src="./image/static-article/nofoto.jpg" ng-if="!comment.user.photo"alt="NO Foto" style="width: 100px; height: 100px; border-radius: 75px 75px">
+                        <span>{{comment.user.firstname}}</span>
+                    </div>
+                    <div class="button_forComment">
+                        <span class="buttonHover" ng-click="commentComment(comment.id)" ng-show="!comment.commentMod" ng-if="autoraisMod"><i class="fas fa-comments"></i></span>
+                        <span class="buttonHover" ng-click="editComment(comment.id, comment.content)" ng-if="comment.access" ng-if="!comment.editMod"><i class="glyphicon glyphicon-pencil"></i></span>
+                        <span class="buttonHover" ng-click="deleteComment(comment.id)" ng-if="comment.access"><i class="glyphicon glyphicon-trash"></i></span>
+                    </div>
+                    <div class="content_comment">
+                        <span ng-if="!comment.editMod">{{comment.content}}</span>
+                        <div class="date_comment">{{comment.date_added}}</div>
+                    </div>
+                    <div ng-if="comment.editMod">
+                        <textarea style="width: 390px;height: 100px;" ng-model="editObj.content"></textarea>
+                        <span class="buttonHover" ng-click="addEditComment(comment.id, comment.rate)" ng-if="comment.access"><i class="glyphicon glyphicon-ok"></i></span>
+                        <span class="buttonHover" ng-click="cancelEditComment(comment.id)"><i class="glyphicon glyphicon-remove"></i></span>
+                    </div>
+                    <div ng-if="comment.commentMod">
+                        <textarea style="width: 390px;height: 100px;" ng-model="newComment.content"></textarea>
+                        <span class="buttonHover" ng-click="addCommentComment(comment.id)"><i class="glyphicon glyphicon-ok"></i></span>
+                        <span class="buttonHover" ng-click="cancelCommentComment(comment.id)"><i class="glyphicon glyphicon-remove"></i></span>
+                </div>
+            </div>
+
+                
+                <div style="padding-left: 30px;" ng-if="comment.nested">
+                    <div ng-repeat="comment in comment.nested">
+                        <img ng-src="http://node3.fe.a-level.com.ua/{{comment.user.photo}}" ng-if="comment.user.photo"alt="NO Foto" style="width: 100px; height: 100px; border-radius: 75px 75px">
+                        <img ng-src="./image/static-article/nofoto.jpg" ng-if="!comment.user.photo"alt="NO Foto" style="width: 100px; height: 100px; border-radius: 75px 75px">
+                            <span>{{comment.user.firstname}}</span>
+                            <span>{{comment.user.lastname}}</span>
+                            <span ng-if="!comment.editMod">{{comment.content}}</span>
+                            <div ng-if="comment.editMod">
+                                <input type="text" ng-model="editObj.content">
+                                <button ng-click="addEditComment(comment.id, comment.rate)" class="btn btn-success" ng-if="comment.access"><i class="glyphicon glyphicon-ok"></i></button>
+                                <button ng-click="cancelEditComment(comment.id)" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i></button>
+                            </div>
+                            <span>{{comment.date_added}}</span>
+                            <button ng-click="deleteComment(comment.id)" class="btn btn-danger" ng-if="comment.access"><i class="glyphicon glyphicon-trash"></i></button>
+                            <button ng-click="editComment(comment.id, comment.content)" ng-if="comment.access" class="btn btn-success" ng-if="!comment.editMod"><i class="glyphicon glyphicon-pencil"></i></button>
+                        <div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

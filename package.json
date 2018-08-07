@@ -1,0 +1,33 @@
+{
+  "name": "2018-06-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "webpack-dev-server --color --watch-content-base --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "ng-parallax": "^1.1.3",
+    "webpack": "^3.12.0",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^2.11.2"
+  },
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-animate": "^1.7.2",
+    "angular-google-maps": "^2.4.1",
+    "angular-recursion": "^1.0.5",
+    "angular-route": "^1.7.1",
+    "angular-simple-logger": "^0.1.7",
+    "angular-touch": "^1.7.2",
+    "angular-ui-bootstrap": "^2.5.6",
+    "bootstrap": "^3.3.7",
+    "lodash": "^4.17.10",
+    "ngmap": "^1.18.4",
+    "sortablejs": "^1.7.0"
+  }
+}

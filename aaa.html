@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body>
+	<style type="text/css">
+		span {
+			cursor: move;
+		}
+	</style>
+	<ol id="items" style="display: inline-block;">
+		<li><span class="glyphicon glyphicon-move" aria-hidden="true">text 1</span></li>
+		<li><span class="glyphicon glyphicon-move" aria-hidden="true">text 2</span></li>
+		<li><span class="glyphicon glyphicon-move" aria-hidden="true">text 3</span></li>
+		<li><span class="glyphicon glyphicon-move" aria-hidden="true">text 4</span></li>
+		<li><span class="glyphicon glyphicon-move" aria-hidden="true">text 5</span></li>
+	</ol>
+	<ol id="items2" style="display: inline-block;">
+		<li><span class="glyphicon glyphicon-move" aria-hidden="true">text 11</span></li>
+		<li><span class="glyphicon glyphicon-move" aria-hidden="true">text 22</span></li>
+		<li><span class="glyphicon glyphicon-move" aria-hidden="true">text 33</span></li>
+		<li><span class="glyphicon glyphicon-move" aria-hidden="true">text 44</span></li>
+		<li><span class="glyphicon glyphicon-move" aria-hidden="true">text 55</span></li>
+	</ol>
+
+
+	<script type="text/javascript" src="./node_modules/sortablejs/Sortable.js"></script>
+
+	<script type="text/javascript">
+		var el = document.getElementById('items');
+		var sortable = Sortable.create(el, {
+			group: "list",
+			handle: '.glyphicon-move',
+			animation: 150
+		});
+
+		var el2 = document.getElementById('items2');
+		var sortable2 = Sortable.create(el2, {
+			group: "list",
+			handle: '.glyphicon-move',
+			animation: 150
+		});
+	</script>
+	
+</body>
+</html>

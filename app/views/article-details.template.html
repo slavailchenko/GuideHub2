@@ -1,0 +1,88 @@
+<div class="row">
+	
+	<div class="col-md-6">
+		<h1>User Article</h1>
+	</div>
+
+	<div class="col-md-5 col-md-offset-1 user-info">
+		<img ng-src={{photo}} class='img-thumbnail img-circle pull-right'>
+		<div class='user'>
+			<div class='user-name'><b>Пользователь</b> {{user.firstname}} {{user.lastname}} </div> 
+			<div class='user-nick'><b>Ник</b> {{user.login}}</div>
+			<div class='date-registration'><b>Зарегистрирован с</b> {{user.date_added | date: 'yyyy-MMM-dd' }}</div>
+		</div>
+	</div>
+
+	<div class='row'>
+		<div class='col-xs-12 title'>
+			<div class='text-center header-article'>
+				<h2>{{article.title}}</h2>
+			<div class='block-header'>
+				<span class='date-added-article'>{{article.date_added | date: 'yyyy-MM-dd'}}</span>
+				<span class='location'><i class="fa fa-map-marker"></i>{{article.location}}</span>
+				<span class="datetravel"><img src='image/plane.png'">{{article.date_travel | date: 'yyyy-MMM' : 'ru' }}</span>
+				<div class='famous'>
+					<a href="" class="btn btn-warning">Избранное</a>
+				</div>
+			</div>
+     	
+
+			<div class="block-count">
+            	<span class='countlikes'><i class="fa fa-heart"></i>{{likes}}</span>
+            	<span class='countcomment'><i class="fa fa-comment"></i>2</span>
+            </div>
+
+		</div>
+		
+		<fieldset class='annotation'>
+
+			<legend align='left'>Краткое описание</legend>
+			<p align='left'>{{article.annotation}}</p>
+		</fieldset>
+
+		<fieldset class='description'>
+
+			<legend align='left'>Основная часть</legend>
+			<p align='left'>{{article.description}}
+			</p>
+			
+		</fieldset>
+
+		<fieldset class='photos'>
+			
+			<legend align='left'>Фото к статье</legend>
+			
+		<div class='text-center'>
+				
+			<img class="bslider__img" ng-repeat="slide in slides" ng-src="http://node3.fe.a-level.com.ua/{{ slide.image }}" 
+				ng-class="{'bslider__img_active' : isActive($index)}" 
+				ng-swipe-right="prevSlide()" ng-swipe-left="nextSlide()"/>
+		 
+			  <button class="bslider__arrow bslider__arrow_left" ng-click="prevSlide()" ng-swipe-left="prevSlide()"></button>
+			  <button class="bslider__arrow bslider__arrow_right" ng-click="nextSlide()" ng-swipe-right="nextSlide()"></button>
+			  
+		  <ul class="bslider__thumbs">
+		    <li class="bslider__thumb" ng-repeat="slide in slides" ng-class="{'bslider__thumb_active' : isActive($index)}" 
+		    ng-click="showSlide($index)"></li>
+		  </ul>
+		
+
+        </div>
+		
+		</fieldset>
+
+		<fieldset class='comments'>
+			
+			<legend align='left'>Комментарии</legend>
+			
+			<div class="form-group">
+				<button ng-click="addLike(article.id)" class="btn btn-danger btn-like"><i class="glyphicon glyphicon-heart"></i> Мне нравится</button>
+
+			</div>
+
+		</fieldset>
+
+		<a href="#/articles-users" class="btn btn-primary pull-right prev-button">Назад</a>
+
+	</div>
+</div>

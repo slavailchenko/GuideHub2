@@ -1,0 +1,965 @@
+.swiss-map {
+    stroke: grey;
+    stroke-width: 3px;
+    fill: none;
+}
+.genf{
+    stroke-dasharray: 300;
+    -webkit-animation: genf 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes genf {
+    0%{
+        stroke-dashoffset: 300;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.wo{
+    stroke-dasharray: 1303;
+    -webkit-animation: wo 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes wo {
+    0%{
+        stroke-dashoffset: 1303;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.nevshtall{
+    stroke-dasharray: 600;
+    -webkit-animation: nevshtall 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes nevshtall {
+    0%{
+        stroke-dashoffset: 600;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.friburg{
+    stroke-dasharray: 800;
+    -webkit-animation: friburg 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes friburg {
+    0%{
+        stroke-dashoffset: 800;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.walle{
+    stroke-dasharray: 1500;
+    -webkit-animation: walle 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes walle {
+    0%{
+        stroke-dashoffset: 1500;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.bern{
+    stroke-dasharray: 1750;
+    -webkit-animation: bern 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes bern {
+    0%{
+        stroke-dashoffset: 1750;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.ura{
+    stroke-dasharray: 650;
+    -webkit-animation: ura 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes ura {
+    0%{
+        stroke-dashoffset: 650;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.zoloturn{
+    stroke-dasharray: 950;
+    -webkit-animation: zoloturn 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes zoloturn {
+    0%{
+        stroke-dashoffset: 950;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.basel{
+    stroke-dasharray: 500;
+    -webkit-animation: basel 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes basel {
+    0%{
+        stroke-dashoffset: 500;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.tichino{
+    stroke-dasharray: 1000;
+    -webkit-animation: tichino 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes tichino {
+    0%{
+        stroke-dashoffset: 1000;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.graubunden{
+    stroke-dasharray: 2000;
+    -webkit-animation: graubunden 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes graubunden {
+    0%{
+        stroke-dashoffset: 2000;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.sanktGallen{
+    stroke-dasharray: 900;
+    -webkit-animation: sanktGallen 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes sanktGallen {
+    0%{
+        stroke-dashoffset: 900;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.aarau{
+    stroke-dasharray: 900;
+    -webkit-animation: aarau 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes aarau {
+    0%{
+        stroke-dashoffset: 900;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.turgau{
+    stroke-dasharray: 700;
+    -webkit-animation: turgau 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes turgau {
+    0%{
+        stroke-dashoffset: 700;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.zurich{
+    stroke-dasharray: 1000;
+    -webkit-animation: zurich 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes zurich {
+    0%{
+        stroke-dashoffset: 1000;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.luzern{
+    stroke-dasharray: 700;
+    -webkit-animation: luzern 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes luzern {
+    0%{
+        stroke-dashoffset: 700;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.obvalden{
+    stroke-dasharray: 400;
+    -webkit-animation: obvalden 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes obvalden {
+    0%{
+        stroke-dashoffset: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.nidvalden{
+    stroke-dasharray: 400;
+    -webkit-animation: nidvalden 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes nidvalden {
+    0%{
+        stroke-dashoffset: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.uri{
+    stroke-dasharray: 700;
+    -webkit-animation: uri 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes uri {
+    0%{
+        stroke-dashoffset: 700;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.zug{
+    stroke-dasharray: 300;
+    -webkit-animation: zug 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes zug {
+    0%{
+        stroke-dashoffset: 300;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.shwich{
+    stroke-dasharray: 600;
+    -webkit-animation: shwich 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes shwich {
+    0%{
+        stroke-dashoffset: 600;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.glarus{
+    stroke-dasharray: 600;
+    -webkit-animation: glarus 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes glarus {
+    0%{
+        stroke-dashoffset: 600;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.appencel_aus{
+    stroke-dasharray: 300;
+    -webkit-animation: appencel_aus 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes appencel_aus {
+    0%{
+        stroke-dashoffset: 300;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.appencel_ine{
+    stroke-dasharray: 200;
+    -webkit-animation: appencel_ine 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes appencel_ine {
+    0%{
+        stroke-dashoffset: 200;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.shavhauzen{
+    stroke-dasharray: 400;
+    -webkit-animation: shavhauzen 3s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes shavhauzen {
+    0%{
+        stroke-dashoffset: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.genf_lake{
+    stroke-dasharray: 600;
+    -webkit-animation: genf_lake 3s linear forwards;
+    fill: blue;
+    fill-opacity: 0;
+}
+@-webkit-keyframes genf_lake {
+    0%{
+        stroke-dashoffset: 600;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.nevshtall_lake{
+    stroke-dasharray: 300;
+    -webkit-animation: nevshtall_lake 3s linear forwards;
+    fill: blue;
+    fill-opacity: 0;
+}
+@-webkit-keyframes nevshtall_lake {
+    0%{
+        stroke-dashoffset: 300;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.luzern_lake{
+    stroke-dasharray: 400;
+    -webkit-animation: luzern_lake 3s linear forwards;
+    fill: blue;
+    fill-opacity: 0;
+}
+@-webkit-keyframes luzern_lake {
+    0%{
+        stroke-dashoffset: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+.zurich_lake{
+    stroke-dasharray: 400;
+    -webkit-animation: zurich_lake 3s linear forwards;
+    fill: blue;
+    fill-opacity: 0;
+}
+@-webkit-keyframes zurich_lake {
+    0%{
+        stroke-dashoffset: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    } 100% {
+        fill-opacity: 1;
+    }
+}
+
+/*                  CLICK            */
+
+.genf_cl{
+    -webkit-animation: genf_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes genf_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 180;
+    } 100% {
+        stroke-dashoffset: 300;
+        stroke-dasharray: 300;
+    }
+}
+.wo_cl{
+    -webkit-animation: wo_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes wo_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1300;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 750;
+    } 100% {
+        stroke-dashoffset: 1300;
+        stroke-dasharray: 1300;
+    }
+}
+.nevshtall_cl{
+    -webkit-animation: nevshtall_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes nevshtall_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 600;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 100% {
+        stroke-dashoffset: 600;
+        stroke-dasharray: 600;
+    }
+}
+.friburg_cl{
+    -webkit-animation: friburg_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes friburg_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 800;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 500;
+    } 100% {
+        stroke-dashoffset: 800;
+        stroke-dasharray: 800;
+    }
+}
+.walle_cl{
+    -webkit-animation: walle_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes walle_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1500;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 850;
+    } 100% {
+        stroke-dashoffset: 1500;
+        stroke-dasharray: 1500;
+    }
+}
+.bern_cl{
+    -webkit-animation: bern_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes bern_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1750;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 850;
+    } 100% {
+        stroke-dashoffset: 1750;
+        stroke-dasharray: 1750;
+    }
+}
+.ura_cl{
+    -webkit-animation: ura_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes ura_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 650;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 100% {
+        stroke-dashoffset: 650;
+        stroke-dasharray: 650;
+    }
+}
+.zoloturn_cl{
+    -webkit-animation: zoloturn_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes zoloturn_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 950;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 500;
+    } 100% {
+        stroke-dashoffset: 950;
+        stroke-dasharray: 950;
+    }
+}
+.basel_cl{
+    -webkit-animation: basel_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes basel_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 500;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 100% {
+        stroke-dashoffset: 500;
+        stroke-dasharray: 500;
+    }
+}
+.tichino_cl{
+    -webkit-animation: tichino_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes tichino_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1000;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 600;
+    } 100% {
+        stroke-dashoffset: 1000;
+        stroke-dasharray: 1000;
+    }
+}
+.graubunden_cl{
+    -webkit-animation: graubunden_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes graubunden_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 2000;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1200;
+    } 100% {
+        stroke-dashoffset: 2000;
+        stroke-dasharray: 2000;
+    }
+}
+.sanktGallen_cl{
+    -webkit-animation: sanktGallen_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes sanktGallen_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 900;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 500;
+    } 100% {
+        stroke-dashoffset: 900;
+        stroke-dasharray: 900;
+    }
+}
+.aarau_cl{
+    -webkit-animation: aarau_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes aarau_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 900;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 500;
+    } 100% {
+        stroke-dashoffset: 900;
+        stroke-dasharray: 900;
+    }
+}
+.turgau_cl{
+    -webkit-animation: turgau_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes turgau_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 700;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 100% {
+        stroke-dashoffset: 700;
+        stroke-dasharray: 700;
+    }
+}
+.zurich_cl{
+    -webkit-animation: zurich_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes zurich_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1000;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 600;
+    } 100% {
+        stroke-dashoffset: 1000;
+        stroke-dasharray: 1000;
+    }
+}
+.luzern_cl{
+    -webkit-animation: luzern_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes luzern_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 700;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 100% {
+        stroke-dashoffset: 700;
+        stroke-dasharray: 700;
+    }
+}
+.obvalden_cl{
+    -webkit-animation: obvalden_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes obvalden_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 250;
+    } 100% {
+        stroke-dashoffset: 400;
+        stroke-dasharray: 400;
+    }
+}
+.nidvalden_cl{
+    -webkit-animation: nidvalden_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes nidvalden_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 250;
+    } 100% {
+        stroke-dashoffset: 400;
+        stroke-dasharray: 400;
+    }
+}
+.uri_cl{
+    -webkit-animation: uri_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes uri_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 700;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 100% {
+        stroke-dashoffset: 700;
+        stroke-dasharray: 700;
+    }
+}
+.zug_cl{
+    -webkit-animation: zug_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes zug_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 150;
+    } 100% {
+        stroke-dashoffset: 300;
+        stroke-dasharray: 300;
+    }
+}
+.shwich_cl{
+    -webkit-animation: shwich_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes shwich_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 600;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 100% {
+        stroke-dashoffset: 600;
+        stroke-dasharray: 600;
+    }
+}
+.glarus_cl{
+    -webkit-animation: glarus_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes glarus_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 600;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 100% {
+        stroke-dashoffset: 600;
+        stroke-dasharray: 600;
+    }
+}
+.appencel_aus_cl{
+    -webkit-animation: appencel_aus_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes appencel_aus_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 150;
+    } 100% {
+        stroke-dashoffset: 300;
+        stroke-dasharray: 300;
+    }
+}
+.appencel_ine_cl{
+    -webkit-animation: appencel_ine_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes appencel_ine_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 100;
+    } 100% {
+        stroke-dashoffset: 200;
+        stroke-dasharray: 200;
+    }
+}
+.shavhauzen_cl{
+    -webkit-animation: shavhauzen_cl 2s linear forwards;
+    fill: black;
+    fill-opacity: 0;
+}
+@-webkit-keyframes shavhauzen_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 200;
+    } 100% {
+        stroke-dashoffset: 400;
+        stroke-dasharray: 400;
+    }
+}
+.genf_lake_cl{
+    -webkit-animation: genf_lake_cl 2s linear forwards;
+    fill: blue;
+    fill-opacity: 0;
+}
+@-webkit-keyframes genf_lake_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 600;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 100% {
+        stroke-dashoffset: 600;
+        stroke-dasharray: 600;
+    }
+}
+.nevshtall_lake_cl{
+    -webkit-animation: nevshtall_lake_cl 2s linear forwards;
+    fill: blue;
+    fill-opacity: 0;
+}
+@-webkit-keyframes nevshtall_lake_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 300;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 150;
+    } 100% {
+        stroke-dashoffset: 300;
+        stroke-dasharray: 300;
+    }
+}
+.luzern_lake_cl{
+    -webkit-animation: luzern_lake_cl 2s linear forwards;
+    fill: blue;
+    fill-opacity: 0;
+}
+@-webkit-keyframes luzern_lake_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 250;
+    } 100% {
+        stroke-dashoffset: 400;
+        stroke-dasharray: 400;
+    }
+}
+.zurich_lake_cl{
+    -webkit-animation: zurich_lake_cl 2s linear forwards;
+    fill: blue;
+    fill-opacity: 0;
+}
+@-webkit-keyframes zurich_lake_cl {
+    0%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 400;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 250;
+    } 100% {
+        stroke-dashoffset: 400;
+        stroke-dasharray: 400;
+    }
+}
