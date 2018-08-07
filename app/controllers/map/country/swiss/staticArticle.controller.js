@@ -29,7 +29,12 @@
                 for (let j = 0; j < data[i].nested.length; j++) {
                     if(data[i].nested[j].user.id === id){
                         data[i].nested[j][mod] = flag;
-                    };   
+                    };
+                    for (let x = 0; x < data[i].nested[j].length; x++){
+                        if(data[i].nested[j].nested[x].user.id === id){
+                            data[i].nested[j].nested[x][mod] = flag;
+                        };
+                    }  
                 }
                 
             }
@@ -44,7 +49,12 @@
                 for (let j = 0; j < data[i].nested.length; j++) {
                     if(data[i].nested[j].id === id){
                         data[i].nested[j][mod] = flag;
-                    };   
+                    };
+                    for (let x = 0; x < data[i].nested[j].length; x++){
+                        if(data[i].nested[j].nested[x].id === id){
+                            data[i].nested[j].nested[x][mod] = flag;
+                        };
+                    }   
                 }
                 
             }
@@ -57,9 +67,11 @@
             for (let i = 0; i < data.length; i++) {
                 data[i].commentMod = false;
                 for (let j = 0; j < data[i].nested.length; j++) {
-                    data[i].nested[j].commentMod = false;   
+                    data[i].nested[j].commentMod = false;
+                    for (let x = 0; x < data[i].nested[j].length; x++){
+                            data[i].nested[j].nested[x].commentMod = false;
+                    }    
                 }
-                
             }
             return data
         };
@@ -67,6 +79,12 @@
             data.map(function(item){
                 if(item.id === id){
                     item.commentMod = flag;
+                }
+                for (let x = 0; x < item.nested.length; x++){
+                    item.nested[x].commentMod = flag;
+                    for (let j = 0; j < item.nested[x].length; j++){
+                        item.nested[x].nested[j].commentMod = flag;
+                    }
                 }
             })
         }
