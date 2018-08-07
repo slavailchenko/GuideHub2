@@ -2,7 +2,15 @@
 .global-map {
     stroke: black;
     stroke-width: 3px;
-    fill: none;
+    fill: #77451b73;
+}
+.southAmerica,.northAmerica,.africa,.europa,.asia,.australia{
+    transition: 1s;
+}
+.southAmerica:hover,.northAmerica:hover,.africa:hover,.europa:hover,.asia:hover,.australia:hover{
+    fill: #77451bc2;
+    stroke: white;
+    transform: scale(1.1)
 }
 .global_map{
     background: url(../image/map/map4.jpg) no-repeat;

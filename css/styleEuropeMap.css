@@ -4,7 +4,7 @@
     fill: #77451b73;
 }
 .rus,.ukr,.bel,.est,.lat,.lit,.polmol,.roma,.bulg,.serb,.gre,.maked,.slovak,.hung,.cze,.aust,.slowenia,.croat,.BandG,.monte,.alb,.swiss,.germ,.nether,.belg,.lux,.ital,.fran,.spain,.port,.turck,.fin,.sveden,.norway,.UK,.irland{
-    transition: fill 1s;
+    transition: 1s;
 }
 .rus:hover,.ukr:hover,.be:hover,.est:hover,.lat:hover,.lit:hover,.pol:hover,.mol:hover,.roma:hover,.bulg:hover,.serb:hover,.gre:hover,.maked:hover,.slovak:hover,.hung:hover,.cze:hover,.aust:hover,.slowenia:hover,.croat:hover,.BandG:hover,.monte:hover,.alb:hover,.swiss:hover,.germ:hover,.nether:hover,.belg:hover,.lux:hover,.ital:hover,.fran:hover,.spain:hover,.port:hover,.turck:hover,.fin:hover,.sveden:hover,.norway:hover,.UK:hover,.irland:hover{
     fill: #77451bc2;
