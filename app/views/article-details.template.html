@@ -1,7 +1,9 @@
-<div class="row">
+<div class="row page-article">
+	
+<div class='row header-page-article'>
 	
 	<div class="col-md-6">
-		<h1>User Article</h1>
+		<h1>Tourist Guide</h1>
 	</div>
 
 	<div class="col-md-5 col-md-offset-1 user-info">
@@ -12,17 +14,18 @@
 			<div class='date-registration'><b>Зарегистрирован с</b> {{user.date_added | date: 'yyyy-MMM-dd' }}</div>
 		</div>
 	</div>
+</div>
 
 	<div class='row'>
 		<div class='col-xs-12 title'>
 			<div class='text-center header-article'>
 				<h2>{{article.title}}</h2>
 			<div class='block-header'>
-				<span class='date-added-article'>{{article.date_added | date: 'yyyy-MM-dd'}}</span>
+				<span class='date-added-article'><i class="fa fa-calendar-check"></i>{{article.date_added | date: 'yyyy-MM-dd'}}</span>
 				<span class='location'><i class="fa fa-map-marker"></i>{{article.location}}</span>
-				<span class="datetravel"><img src='image/plane.png'">{{article.date_travel | date: 'yyyy-MMM' : 'ru' }}</span>
+				<span class="datetravel"><img src='image/plane.png'>{{article.date_travel | date: 'yyyy-MMM' : 'ru' }}</span>
 				<div class='famous'>
-					<a href="" class="btn btn-warning">Избранное</a>
+					<a href="" class="btn btn-warning" ng-click="addFavorites()">Избранное</a>
 				</div>
 			</div>
      	
@@ -76,8 +79,27 @@
 			<legend align='left'>Комментарии</legend>
 			
 			<div class="form-group">
-				<button ng-click="addLike(article.id)" class="btn btn-danger btn-like"><i class="glyphicon glyphicon-heart"></i> Мне нравится</button>
-
+				<div class="container main_comment">
+						<div class="add-comment container plate">
+							<textarea name="addComment" ng-model="newComment.content"></textarea>
+							<span class="buttonHover" ng-click="addComment()"><i class="glyphicon glyphicon-plus" ></i>Add Comment</span>
+						</div>
+						<div class="container comments-article">
+							<div class="firstComment">
+								<div ng-repeat="comment in comments"> 
+									<div class="comment-article plate" ng-include="'./app/views/comment_article.template.html'"></div>
+									<div style="padding-left: 70px;" ng-if="comment.nested">
+										<div ng-repeat="comment in comment.nested" ng-if="comment.showComment">
+											<div class="comment-article plate" ng-include="'./app/views/comment_article.template.html'"></div>
+											<div style="padding-left: 80px;" ng-if="comment.nested">
+									<div ng-repeat="comment in comment.nested" ng-if="comment.showComment">
+										<div class="comment-article plate" ng-include="'./app/views/comment_article.template.html'"></div> 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 		</fieldset>

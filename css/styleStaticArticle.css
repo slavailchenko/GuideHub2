@@ -1,3 +1,6 @@
+.alertsuccess {
+    background: #808080;
+}
 .header-article-city, .header-article-region{
     background-size: cover;
     display: block;
@@ -12,6 +15,11 @@
 }
 .header-article-city h2, .header-article-region h2{
     padding-bottom: 200px;
+}
+.backgraund_article {
+    background: url(../image/map/map4.jpg) no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
 }
 .comment-article{
     margin: 0 auto;
@@ -69,10 +77,26 @@
 /*          For Hover button            */
 .buttonHover {
     display: inline-block;
-    color: #808080;
-    transition: color 1s;
+    color: #101010b8;
+    transition: color 0,5s;
     cursor: pointer;
 }
 .buttonHover:hover {
-    color: aqua;
+    color: rgba(0, 89, 179,0.5);
+}
+.plate {
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    border-radius: 50px;
+    color: #4c1f1f;
+    background: #84703263;
+}
+.inputForm{
+    background: #84703263;
+    border: none;
+    outline: none;
+}
+.inputForm:focus{
+    outline: none;
 }
