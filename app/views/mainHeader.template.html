@@ -1,30 +1,30 @@
-
-<div class="main-header col-md-10 col-md-offset-1" ng-controller="MainHeader">
+<div class="main-header" ng-controller="MainHeader">
 
     
-    <!-- <div class="btn-group" ng-if="!isLogged()">
-        <button ng-click="login()">Войти</button>
-        <button ng-click="registration()">Зарегаться</button>
-    </div>
-    <div class="btn-group account" ng-if="isLogged()">
-        <li><a href="#/user-account">Личный кабинет</a></li>
-        <button ng-click="logOut()">Выйти</button>
-    </div> -->
-    <div class="container">
-   
-        <div class="siteName" style="padding-right: 140px;">
-            <h1>Tourist Guide</h1>
-            <nav class="main-header-menu">
-                <ul>
-                    <li><a href="#/">Главная</a><i class="fas fa-home"></i></li>
-                    <li><a href="#/global_map">Карты</a><i class="fas fa-map-marked-alt"></i></li>
-                    <li><a href="#/articles-users">Статьи</a><i class="far fa-newspaper"></i></li>
-                    <li ng-if="isLogged()"><a href="#/user-account">Личный кабинет</a><i class="far fa-user"></i></li>
-                    <li ng-if="!isLogged()" ng-click="login()"><span>Войти</span><i class="far fa-user"></i></li>
-                </ul>
-            </nav>
-            <h3>You don't know where to go? We will help you!</h3>
+        <!-- <div class="btn-group" ng-if="!isLogged()">
+            <button ng-click="login()">Войти</button>
+            <button ng-click="registration()">Зарегаться</button>
         </div>
+        <div class="btn-group account" ng-if="isLogged()">
+            <li><a href="#/user-account">Личный кабинет</a></li>
+            <button ng-click="logOut()">Выйти</button>
+        </div> -->
+        <div class="container">
+       
+            <div class="siteName">
+                <h1>Tourist Guide</h1>
+                <nav class="main-header-menu">
+                    <ul>
+                        <li><a href="#/">Главная</a><i class="fas fa-home"></i></li>
+                        <li><a href="#/global_map">Карты</a><i class="fas fa-map-marked-alt"></i></li>
+                        <li><a href="#/articles-users">Статьи</a><i class="far fa-newspaper"></i></li>
+                        <li ng-if="isLogged()"><a href="#/user-account">Личный кабинет</a><i class="far fa-user"></i></li>
+                        <li ng-if="!isLogged()" ng-click="login()"><span>Войти</span><i class="far fa-user"></i></li>
+                    </ul>
+                </nav>
+                <h3>You don't know where to go? We will help you!</h3>
+            </div>
+        </div>
+    
     </div>
-
 </div>

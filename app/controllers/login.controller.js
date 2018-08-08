@@ -7,7 +7,8 @@
 		'$location',
 		'$uibModalInstance',
 		'$rootScope', 
-		function($scope, accountRepository, $location, $uibModalInstance, $rootScope) {
+		'notify',
+		function($scope, accountRepository, $location, $uibModalInstance, $rootScope, notify) {
 			$scope.user = {
 				"login": "",
 				"password": ""
@@ -22,7 +23,16 @@
 					localStorage.setItem('userId', response.data.id);
 					localStorage.setItem('userEmail', response.data.email);
 					$uibModalInstance.close(true);
-				}, function(error) {});
+					notify({ 
+	                    message:'Добро пожаловать', 
+	                    classes: "alert succes"
+	                });
+				}, function(error) {
+					notify({ 
+	                    message:'Пароль или логин введен неверно!', 
+	                    classes: "alert succes"
+	                });
+				});
 			}
 		}]);
 })();

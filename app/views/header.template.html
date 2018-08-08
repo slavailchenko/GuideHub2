@@ -1,22 +1,21 @@
 
 <header ng-controller="Header">
-     <nav class="main-menu">
-        
-        <ul>
-            <li><a href="#/">Главная</a></li>
-            <li><a href="#/global_map">Карты</a></li>
-            <li><a href="#/articles-users">Статьи пользователей</a></li>
-            <div class="" ng-if="!isLogged()">
-                <li ng-click="registration()"><span>Зарегаться</span></li>
-                <button class="btn btn-warning pull-left" ng-click="login()">Войти</button>
-            </div>
-            <div class="account" ng-if="isLogged()">
-                <li><a href="#/user-account">Личный кабинет</a></li>
-                <button class="btn btn-warning pull-left" ng-click="logOut()">Выйти</button>
-            </div>
-
-        </ul>
-    </nav>
+        <nav class="main-menu">
+           
+           <ul>
+               <li><a href="#/">Главная</a></li>
+               <li><a href="#/global_map">Карты</a></li>
+               <li><a href="#/articles-users">Статьи<br>пользователей</a></li>
+               <div class="" ng-if="!isLogged()">
+                   <li ng-click="registration()"><span>Зарегаться</span></li>
+                   <button class="btn btn-warning pull-left" ng-click="login()">Войти</button>
+               </div>
+               <div class="account" ng-if="isLogged()">
+                   <li><a href="#/user-account">Личный кабинет</a></li>
+                   <li class="logOut" ng-click="logOut()">Выйти</li>
+                   <!-- <button class="btn btn-warning pull-left" ng-click="logOut()">Выйти</button> -->
+               </div>
+   
+           </ul>
+       </nav>
 </header>
-
-
