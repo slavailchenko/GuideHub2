@@ -61,6 +61,48 @@
             
             return data
         }
+        function showComment(data, flag, mod){
+            for (let i = 0; i < data.length; i++) {
+                data[i][mod] = flag;
+                for (let j = 0; j < data[i].nested.length; j++) {
+                    data[i].nested[j][mod] = flag;
+                    for (let x = 0; x < data[i].nested[j].nested.length; x++){
+                        data[i].nested[j].nested[x][mod] = flag;
+                    }   
+                }
+                
+            }
+            
+            return data
+        }
+        function showCommentForId(data, id, flag, mod){
+            for (let i = 0; i < data.length; i++) {
+                if(data[i].id === id){
+                    data[i][mod] = flag;
+                    for (let j = 0; j < data[i].nested.length; j++) {
+                        data[i].nested[j][mod] = flag;
+                        for (let x = 0; x < data[i].nested[j].nested.length; x++){
+                            data[i].nested[j].nested[x][mod] = flag;
+                        }   
+                    }
+                }else if(data[i].id !== id){
+                    for (let i = 0; i < data.length; i++) {
+                        for (let j = 0; j < data[i].nested.length; j++) {
+                            if(data[i].id === id){
+                            data[i].nested[j][mod] = flag;
+                            }
+                            for (let x = 0; x < data[i].nested[j].nested.length; x++){
+                                data[i].nested[j].nested[x][mod] = flag;
+                            }   
+                        }
+                    
+                    }
+                }
+                }
+                return data  
+            }
+            
+
 
         function debugCommentMod(data){
             
@@ -93,7 +135,9 @@
                 console.log(response.data)
                 let commentMod = debugCommentMod(response.data);
                 let userId = +localStorage.getItem('userId');
-                let comments = accesforUser(commentMod, userId, true, 'access');
+                let access = accesforUser(commentMod, userId, true, 'access');
+                let comments = showComment(access, false, 'showComment');
+                console.log(comments)
                 $scope.comments = comments.slice().reverse();
             }) 
         }
@@ -174,6 +218,14 @@
                     content: ''
                 }
             })
-        }   
+        };
+        $scope.showComment = function(id){
+            $scope.comments = showCommentForId($scope.comments, id, true , 'showComment');
+        }
+        $scope.hidenComment = function(id){
+            $scope.comments = showCommentForId($scope.comments, id, false , 'showComment'); 
+            console.log(id);
+            console.log($scope.comments);
+        }  
      }])
 })()

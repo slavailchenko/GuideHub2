@@ -1,7 +1,7 @@
 
 .global-map {
     stroke: black;
-    stroke-width: 3px;
+    stroke-width: 2px;
     fill: #77451b73;
 }
 .southAmerica,.northAmerica,.africa,.europa,.asia,.australia{
@@ -14,7 +14,8 @@
 }
 .global_map{
     background: url(../image/map/map4.jpg) no-repeat;
-    -webkit-background-size: 100%;
+    /* -webkit-background-size: 100%; */
+    background-size: cover;
 }
 .southAmerica{
     stroke-dasharray: 990;

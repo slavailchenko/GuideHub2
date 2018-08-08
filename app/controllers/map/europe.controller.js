@@ -83,7 +83,52 @@
             setTimeout(function(){         
                 $scope.$apply($location.path($location.path() + '/' + country))
             }, 2000)
-
+        }
+        $scope.hover = function(country){
+            $scope.showDetails = true;
+            let detail = {
+                rus: 'Россия', 
+                ukr: 'Украина',
+                bel: 'Беларуссия',
+                est: 'Эстония',
+                lat: 'Латвия',
+                lit: 'Литва',
+                pol: 'Польша',
+                mol: 'Молдавия',
+                roma: 'Румыния',
+                bulg: 'Болгария',
+                serb: 'Сербия',
+                gre: 'Греция',
+                maked: 'Македония',
+                slovak: 'Словакия',
+                hung: 'Венгрия',
+                cze: 'Чехия',
+                aust: 'Австрия',
+                slowenia: 'Словения',
+                croat: 'Хорватия',
+                BandG: 'Босния и Герцоговина',
+                monte: 'Монтенеґро',
+                alb: 'Албания',
+                swiss: 'Швейцария',
+                germ: 'Германия',
+                nether: 'Голандия',
+                belg: 'Бельгия',
+                lux: 'Люксинбург',
+                ital: 'Италия',
+                fran: 'Франция',
+                spain: 'Испания',
+                port: 'Португалия',
+                turck: 'Турция',
+                fin: 'Финляндия',
+                sveden: 'Швеция',
+                norway: 'Норвегия',
+                UK: 'Англия',
+                irland: 'Ирландия'
+               }; 
+            $scope.detail = detail[country]
+        }
+        $scope.hoverOut = function(){
+            $scope.showDetails = false;
         }
      }])
 })()

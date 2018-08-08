@@ -29,10 +29,10 @@
                     <div ng-repeat="comment in comments"> 
                         <div class="comment-article plate" ng-include="'./app/views/map/country/swiss/comment_Static.html'"></div>
                         <div style="padding-left: 70px;" ng-if="comment.nested">
-                            <div ng-repeat="comment in comment.nested">
+                            <div ng-repeat="comment in comment.nested" ng-if="comment.showComment">
                                 <div class="comment-article plate" ng-include="'./app/views/map/country/swiss/comment_Static.html'"></div>
                                 <div style="padding-left: 80px;" ng-if="comment.nested">
-                                    <div ng-repeat="comment in comment.nested">
+                                    <div ng-repeat="comment in comment.nested" ng-if="comment.showComment">
                                         <div class="comment-article plate" ng-include="'./app/views/map/country/swiss/comment_Static.html'"></div> 
                                     </div>
                                 </div>

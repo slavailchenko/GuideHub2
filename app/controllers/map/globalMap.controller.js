@@ -23,6 +23,20 @@
                 $scope.$apply($location.path($location.url() + '/europe'))
             }, 2000)
         }
-
+        $scope.hover = function(continent){
+            $scope.showDetails = true;
+            let detail = {
+                southAmerica: 'Южная Америка',
+                northAmerica: 'Северная Америка',
+                africa: 'Африка',
+                europa: 'Европа',
+                asia: 'Азия',
+                australia: 'Австралия'
+            }
+            $scope.detail = detail[continent]
+        }
+        $scope.hoverOut = function(){
+            $scope.showDetails = false;
+        }
     }])
 })()

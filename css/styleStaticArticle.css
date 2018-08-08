@@ -74,12 +74,12 @@
 /*          For Hover button            */
 .buttonHover {
     display: inline-block;
-    color: #808080;
-    transition: color 1s;
+    color: #101010b8;
+    transition: color 0,5s;
     cursor: pointer;
 }
 .buttonHover:hover {
-    color: aqua;
+    color: rgba(0, 89, 179,0.5);
 }
 .plate {
     border: 1px solid black;

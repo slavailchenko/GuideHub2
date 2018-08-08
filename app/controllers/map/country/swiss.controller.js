@@ -68,6 +68,40 @@
             setTimeout(function(){         
                 $scope.$apply($location.path($location.path() + '/' + city))
             }, 2000)
-        }
+        };
+        $scope.hover = function(city){
+            $scope.showDetails = true;
+            let detail = {
+                genf: 'Женева',
+                wo: 'Во',
+                nevshtall: 'Невшатель',
+                friburg: 'Фрибург',
+                walle: 'Валле',
+                bern: 'Берн',
+                ura: 'Юра',
+                zoloturn: 'Золотурн',
+                basel: 'Базель',
+                tichino: 'Тичино',
+                graubunden: 'Граубюнден',
+                sanktGallen: 'Санкт-Галлен ',
+                aarau: 'Аарау',
+                turgau: 'Тургау',
+                zurich: 'Цюрих',
+                luzern: 'Люцерн',
+                obvalden: 'Обвальден', 
+                nidvalden: 'Нидвальден',
+                uri: "Ури",
+                zug: 'Цуг',
+                shwich: 'Швиц',
+                glarus: 'Гларус',
+                appencel_aus: 'Аппенцелль-Ауссерроден',
+                appencel_ine: 'Аппенцелль-Иннерроден',
+                shavhauzen: 'Шаффхаузен'
+            }
+            $scope.detail = detail[city];
+        };
+        $scope.hoverOut = function(){
+            $scope.showDetails = false;
+        };
     }])
 })()

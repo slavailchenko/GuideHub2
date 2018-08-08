@@ -23,7 +23,7 @@
 			<div class='block-header'>
 				<span class='date-added-article'><i class="fa fa-calendar-check"></i>{{article.date_added | date: 'yyyy-MM-dd'}}</span>
 				<span class='location'><i class="fa fa-map-marker"></i>{{article.location}}</span>
-				<span class="datetravel"><img src='image/plane.png'">{{article.date_travel | date: 'yyyy-MMM' : 'ru' }}</span>
+				<span class="datetravel"><img src='image/plane.png'>{{article.date_travel | date: 'yyyy-MMM' : 'ru' }}</span>
 				<div class='famous'>
 					<a href="" class="btn btn-warning" ng-click="addFavorites()">Избранное</a>
 				</div>
@@ -79,12 +79,27 @@
 			<legend align='left'>Комментарии</legend>
 			
 			<div class="form-group">
-				<button ng-click="addLike()" class="btn btn-danger btn-like"><i class="glyphicon glyphicon-heart"></i> Мне нравится</button>
-				<button class="btn btn-primary btn-facebook pull-right"> Facebook</button>
-				<button class="btn btn-info btn-twitter pull-right"> Twitter</button>
-				<button class="btn btn-danger btn-instagramm pull-right"> Instagramm</button>
-
-
+				<div class="container main_comment">
+						<div class="add-comment container plate">
+							<textarea name="addComment" ng-model="newComment.content"></textarea>
+							<span class="buttonHover" ng-click="addComment()"><i class="glyphicon glyphicon-plus" ></i>Add Comment</span>
+						</div>
+						<div class="container comments-article">
+							<div class="firstComment">
+								<div ng-repeat="comment in comments"> 
+									<div class="comment-article plate" ng-include="'./app/views/comment_article.template.html'"></div>
+									<div style="padding-left: 70px;" ng-if="comment.nested">
+										<div ng-repeat="comment in comment.nested" ng-if="comment.showComment">
+											<div class="comment-article plate" ng-include="'./app/views/comment_article.template.html'"></div>
+											<div style="padding-left: 80px;" ng-if="comment.nested">
+									<div ng-repeat="comment in comment.nested" ng-if="comment.showComment">
+										<div class="comment-article plate" ng-include="'./app/views/comment_article.template.html'"></div> 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 		</fieldset>
