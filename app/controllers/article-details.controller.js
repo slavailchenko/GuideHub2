@@ -371,7 +371,5 @@ app.controller('ArticleDetails', ['$scope', '$rootScope', '$routeParams', 'webAp
 	}
 	$scope.hidenComment = function(id){
 		$scope.comments = showCommentForId($scope.comments, id, false , 'showComment'); 
-		console.log(id);
-		console.log($scope.comments);
 	}
 }]);

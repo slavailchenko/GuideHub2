@@ -1,3 +1,6 @@
+.alertsuccess {
+    background: #808080;
+}
 .header-article-city, .header-article-region{
     background-size: cover;
     display: block;
@@ -88,4 +91,12 @@
     border-radius: 50px;
     color: #4c1f1f;
     background: #84703263;
+}
+.inputForm{
+    background: #84703263;
+    border: none;
+    outline: none;
+}
+.inputForm:focus{
+    outline: none;
 }

@@ -1,7 +1,7 @@
 
 (function(){
     'use strict'
-    app.controller('BaselArticle', [ '$scope', 'staticArticle.repository', '$location', '$rootScope',function($scope, staticArticleRepository, $location, $rootScope){
+    app.controller('BaselArticle', [ '$scope', 'staticArticle.repository', '$location', '$rootScope','notify',function($scope, staticArticleRepository, $location, $rootScope, notify){
         $scope.newComment = {
             "article_id": 1,
             "user_id": 0,
@@ -149,7 +149,11 @@
             $scope.newComment.parent_id = parentId;
             staticArticleRepository.addCommentStaticArticle($scope.newComment)
             .then(function(response){
-                getComment()
+                getComment();
+                notify({
+                    message: 'Комментарий добавлен',
+                    classes: 'alert danger',
+                })
                 $scope.newComment = {
                     "article_id": 1,
                     "user_id": 0,
@@ -179,7 +183,11 @@
         $scope.deleteComment = function(id){
             staticArticleRepository.deleteCommentStaticArticle(id)
             .then(function(response){
-                getComment()
+                getComment();
+                notify({
+                    message: 'Комментарий удален',
+                    classes: 'alert-danger',
+                })
             })
         }
         // COMMENT COMMENT
@@ -191,6 +199,10 @@
         $scope.addCommentComment = function(id){
             commentMod($scope.comments, id, false)
             addComment(id);
+            notify({
+                message: 'Комментарий добавлен',
+                classes: 'alert-danger',
+            })
         }
         $scope.commentComment = function(id){
             commentMod($scope.comments, id, true)    
@@ -213,6 +225,10 @@
             staticArticleRepository.editCommentStaticArticle(id, $scope.editObj).then(function(response){ 
                 console.log(response)
                 getComment()
+                notify({
+                    message: 'Комментарий отредактировано',
+                    classes: 'alert-danger',
+                })
                 $scope.editObj = {
                     rate: '',
                     content: ''

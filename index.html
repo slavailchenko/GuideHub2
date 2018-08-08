@@ -12,14 +12,14 @@
     <link rel='stylesheet' type="text/css" href="./css/styleEuropeMap.css">
     <link rel='stylesheet' type="text/css" href="./css/swissMap.css">
     <link rel='stylesheet' type="text/css" href="./css/styleStaticArticle.css">
-    <link type="text/css" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet">    
+    <link type="text/css" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/@cgross/angular-notify/dist/angular-notify.css">    
 </head>
 <body>
     <div>
         <ng-include ng-if="path !== '/'" exact src="'app/views/header.template.html'"></ng-include>
         <ng-include ng-if="path == '/'" exact src="'app/views/mainHeader.template.html'"></ng-include>
         <ng-view></ng-view>
-
     </div>
     
     <script type="text/javascript" src="./node_modules/angular/angular.js"></script>
@@ -37,6 +37,7 @@
     <script type="text/javascript" src="./node_modules/ng-ckeditor-master/ng-ckeditor.js"></script>
 
     <script type="text/javascript" src="./node_modules/ng-parallax/src/ngParallax.js"></script>
+    <script type="text/javascript" src='node_modules/@cgross/angular-notify/dist/angular-notify.js'></script>
 
     <script type="text/javascript" src="app/app.module.js"></script>
     <script type="text/javascript" src="app/app.routes.js"></script>
