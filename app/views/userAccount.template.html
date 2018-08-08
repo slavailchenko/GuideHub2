@@ -11,15 +11,15 @@
 						<img src="{{userPhoto}}" ng-click="triggerFile('image-file')">
 					</form>
 				</div>
-				<div class="user-name col-md-4">
+				<div class="user-name col-md-5">
 					<span ng-show="userNameClick" ng-click="userNameClickHandler_1()">{{userName}}</span>
 					<input type="text" ng-hide="userNameClick" ng-model="userName" ng-keypress="userNameClickHandler_2($event)">
 
 					<span ng-show="userEmailClick" ng-click="userEmailClickHandler_1()">{{userEmail}}</span>
 					<input type="email" ng-hide="userEmailClick" ng-model="userEmail" ng-keypress="userEmailClickHandler_2($event)">
 				</div>
-				<div class="change-user-data col-md-5">
-					<div class="change-password col-md-6">
+				<div class="change-user-data col-md-4">
+					<div class="change-password ">
 						<button class="btn btn-primary" ng-click="openChangePass()">Изменить пароль</button><br>
 						<form id="change-password-form">
 							<input id="oldPassword" type="text" placeholder="Введите старый пароль" ng-model="oldPassword" ng-blur="checkOldPassword()" autocomplete="off"><br>
@@ -54,7 +54,7 @@
 					
 					<br>
 					<ol class="trips-list">
-						<li ng-repeat="article in writtenArticles"><span>{{article.title}}</span><button class="btn btn-danger pull-right" ng-click="deleteArticle(article)"><i class="far fa-trash-alt"></i></button><button class="btn btn-primary pull-right" ng-click="editArticle(article)"><i class="far fa-edit"></i></button></li>
+						<li ng-repeat="article in writtenArticles"><a href="#/articles/{{article.id}}">{{article.title}}</a><button class="btn btn-danger pull-right" ng-click="deleteArticle(article)"><i class="far fa-trash-alt"></i></button><button class="btn btn-primary pull-right" ng-click="editArticle(article)"><i class="far fa-edit"></i></button></li>
 					</ol>
 				</div>
 				</div>

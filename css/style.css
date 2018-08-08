@@ -125,7 +125,7 @@ nav button {
 /*Main Header*/
 
 .background {
-    background-image: url(../image/sea.png);
+    background-image: url(../image/sea2.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: fixed;
@@ -150,7 +150,7 @@ nav button {
 .main-header-menu li {
     display: inline-block;
     width: 24%;
-    font-size: 30px;
+    font-size: 24px;
     padding: 80px 0;
     background: rgba(255,255,255, 0.6);
     box-sizing: border-box;
@@ -205,7 +205,7 @@ nav button {
 }
 
 .main-header-menu li:last-child:hover a {
-    right: 20px;
+    right: 10px;
 }
 
 .main-header-menu li:last-child a {
@@ -229,7 +229,7 @@ nav button {
 
  .first-row {
     padding: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     margin-bottom: 50px;
     background: rgba(255,255,255,0.7);
     border-radius: 50px;
@@ -256,7 +256,7 @@ nav button {
  }
 
  .change-user-data {
-    padding-top: 55px;
+    padding-top: 30px;
  }
 
  .change-password, .change-email {
@@ -264,7 +264,7 @@ nav button {
  }
 
  .change-password > button, .change-email > button {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
  }
 
  #change-password-form, #change-email-form {

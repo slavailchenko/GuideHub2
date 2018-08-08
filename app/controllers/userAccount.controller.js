@@ -1,24 +1,26 @@
 (function(){
     'use strict';
-
-    app.directive('base64', [function () {
-        return {
-            scope: {
-                base64: "="
-            },
-            link: function (scope, element, attributes) {
-                element.bind('change', function (changeEvent) {
-                    var reader = new FileReader();
-                    reader.onload = function (event) {
-                        scope.$apply(function() {
-                            scope.base64 = event.target.result;
-                        });
-                    }
-                    reader.readAsDataURL(changeEvent.target.files[0]);
-                });
-            }
-        }
-    }]);
+    
+    // app.directive('base64',  [function () {
+    //     return {
+    //         scope: {
+    //             base64: "="
+    //         },
+    //         link: function (scope, element, attributes) {
+    //             element.bind('change', function (changeEvent) {
+    //                 var reader = new FileReader();
+    //                 reader.onload = function (event) {
+    //                     scope.$apply(function() {
+    //                         scope.base64 = event.target.result;
+    //                     });
+    //                 }
+    //                 reader.readAsDataURL(changeEvent.target.files[0]);
+    //                 console.log(scope.base64);
+    //                 // photoPhoto = scope.base64;
+    //             });
+    //         }
+    //     }
+    // }]);
 
     app.controller('UserAccount', [
         '$scope',
@@ -27,7 +29,8 @@
         '$rootScope', 
         '$location',
         '$uibModal',
-        function($scope, accountRepository, webApi, $rootScope, $location, $uibModal){
+        'notify',
+        function($scope, accountRepository, webApi, $rootScope, $location, $uibModal, notify){
 
         $rootScope.path = $location.path();
 
@@ -64,7 +67,7 @@
         // User's photo 
         $scope.tempInput = "";
 
-        $scope.changePhoto = function() {
+        $scope.changePhoto = function() {console.log("sdsd");
             var input, file, fr, img, result;
             console.log('aaa');
             input = document.getElementById("userPhoto");
@@ -83,7 +86,7 @@
                 console.log(fr.result);
                 result = fr.result;
 
-                var obj = {"photo": result};
+                var obj = {"photo": scope.base64};
                 accountRepository.editUserData(localStorage.getItem("userId"), obj).then(function(response) {
                     console.log(response);
                 }, function(error) {});
@@ -219,10 +222,17 @@
                     password: $scope.newPassword2
                 };
                 accountRepository.editUserData(localStorage.getItem('userId'), data).then(function(response) {
-                    alert("Пароль успешно изменен!");
+                   
+                  notify({ 
+                    message:'Пароль успешно изменен', 
+                    classes: "alert succes"
+                  });
                 });
             } else {
-                alert("Пароль введен неверно!");
+                notify({ 
+                    message:'Пароль введен неверно', 
+                    classes: "alert danger"
+                  });
             }
         };
 
@@ -382,6 +392,8 @@
                     $rootScope.writtenArticles.push(response.data[i]);
                 }
             }
+
+            console.log($rootScope.writtenArticles)
         });
 
         $rootScope.articleData = {
@@ -434,6 +446,7 @@
             $rootScope.articleData.date_travel = "";
             $rootScope.articleData.description = "";
             $rootScope.articleData.article_id = "";
+            $rootScope.articleData.images = [];
             var modal = $uibModal.open({
                 templateUrl: 'app/modal/articleEditor.template.html',
                 controller: 'ArticleEditor',

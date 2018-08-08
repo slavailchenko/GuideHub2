@@ -21,17 +21,30 @@
 		<textarea rows="20" cols="100" ng-model="articleData.description"></textarea><br>
 
 		<div class="article-editor-photos">
-			<input type="file" id="image-file" accept="image/*" name="img" multiple base64="articlesPhoto">
-			<img src="{{articlesPhoto}}" ng-click="triggerFile('image-file')">
-
-			<input type="file" id="image-file" accept="image/*" name="img" multiple base64="articlesPhoto">
-			<img src="{{articlesPhoto}}" ng-click="triggerFile('image-file')">
-
-			<input type="file" id="image-file" accept="image/*" name="img" multiple base64="articlesPhoto">
-			<img src="{{articlesPhoto}}" ng-click="triggerFile('image-file')">
 			
-			<input type="file" id="image-file" accept="image/*" name="img" multiple base64="articlesPhoto">
-			<img src="{{articlesPhoto}}" ng-click="triggerFile('image-file')">
+			<div class="container" ng-app="app">
+				<div class="row">
+					<div class="col-sm-4" ng-controller="controller1">
+						<input type="file" base64="userImage">
+						
+						<div class="mt-3">
+							<img width="200" alt="" ng-src="{{userImage}}">
+						</div>
+						<button ng-click="uploadImage()">Upload</button>
+					</div>
+					
+					<div class="col-sm-4" ng-controller="controller2">
+						<input type="file" id="image-file1" hidden base64="userImage">
+						<img width="200" alt="" ng-src="{{userImage}}" ng-click="triggerFile('image-file1')">
+					</div>
+					
+					<div class="col-sm-4" ng-controller="controller3">
+						<input type="file" id="image-file2" file-model="userImage" hidden>
+						<img width="200" alt="" ng-src="{{userImage}}" ng-click="triggerFile('image-file2')">
+					</div>
+				</div>
+			</div>
+			
 		</div>
 
 		<button class="btn btn-success" type="submit" ng-if="!sendEditButton">Отправить статью</button>
