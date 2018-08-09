@@ -23,16 +23,16 @@
 			<div class='block-header'>
 				<span class='date-added-article'><i class="fa fa-calendar-check"></i>{{article.date_added | date: 'yyyy-MM-dd'}}</span>
 				<span class='location'><i class="fa fa-map-marker"></i>{{article.location}}</span>
-				<span class="datetravel"><img src='image/plane.png'>{{article.date_travel | date: 'yyyy-MMM' : 'ru' }}</span>
+				<span class="datetravel"><img src='image/plane.png'">{{article.date_travel | date: 'yyyy-MMM' : 'ru' }}</span>
 				<div class='famous'>
-					<a href="" class="btn btn-warning" ng-click="addFavorites()">Избранное</a>
+					<a href="" ng-class="btnClassFamous" ng-click="addFavorites()">Избранное</a>
 				</div>
 			</div>
      	
 
 			<div class="block-count">
             	<span class='countlikes'><i class="fa fa-heart"></i>{{likes}}</span>
-            	<span class='countcomment'><i class="fa fa-comment"></i>2</span>
+            	<span class='countcomment'><i class="fa fa-comment"></i>{{count_comments}}</span>
             </div>
 
 		</div>
@@ -79,6 +79,8 @@
 			<legend align='left'>Комментарии</legend>
 			
 			<div class="form-group">
+				<button ng-click="addLike()" ng-class="btnClass"><i class="glyphicon glyphicon-heart"></i> {{btnLike}}</button>
+
 				<div class="container main_comment">
 						<div class="add-comment container plate">
 							<textarea name="addComment" ng-model="newComment.content"></textarea>
@@ -100,6 +102,8 @@
 						</div>
 					</div>
 				</div>
+				</div>
+
 			</div>
 
 		</fieldset>

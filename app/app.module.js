@@ -1,5 +1,5 @@
 
-var app = angular.module('GuideApp', ['ngRoute', 'ui.bootstrap', 'uiGmapgoogle-maps', 'nemLogging', 'ngAnimate', 'ngTouch', 'ngParallax', 'ngCkeditor','cgNotify'])
+var app = angular.module('GuideApp', ['ngRoute', 'ui.bootstrap', 'uiGmapgoogle-maps', 'nemLogging', 'ngAnimate', 'ngTouch', 'ngParallax','cgNotify'])
 .config(
     ['uiGmapGoogleMapApiProvider', function(GoogleMapApiProviders) {
         GoogleMapApiProviders.configure({

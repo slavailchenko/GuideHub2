@@ -5,29 +5,59 @@ app.controller('ArticleDetails', ['$scope', '$rootScope', '$routeParams', 'webAp
 	var articleId = $routeParams.id,
 		articleModel = {};
 
+		
 		$scope.newLike= {
 			"article_id": articleId,
             "user_id": localStorage.getItem('userId')
 		
 		};
 
-		console.log ($scope.newLike);
-
 		
+
 			articlesRepository.getLikes(articleId).then(function(response) {
 			 		
 			 		$scope.likesElemets=response.data;
 			 		$scope.likes=response.data.length;
 			 		console.log (response);
+
+					$scope.setLike = true;
+					$scope.btnClass = "btn btn-success btn-like";
+
+						for (let i=0; i<$scope.likes; i++) {
+			              if (localStorage.getItem('userId') == $scope.likesElemets[i].user_id) {
+			              		console.log ($scope.likesElemets[i].user_id);
+			                	$scope.btnLike='Мне не нравится';
+			                	$scope.btnClass = "btn btn-danger btn-like";
+			                	console.log ('check');
+			                	return $scope.setLike=false;
+			                	} 
+			                	
+			              };
+          console.log ($scope.setLike);
+
+    				    $scope.btnLike= ($scope.setLike = true) ? 'Мне нравится' : 'Мне не нравится';
+    				    $scope.btnClass = ($scope.setLike = true) ? 'btn btn-success btn-like' : "btn btn-danger btn-like";
+
+							console.log ('btnlike '+$scope.btnLike);
+							console.log ('setlike '+$scope.setLike);
+
 				}, function(error) {});
 
+		if (localStorage.getItem('userId')) {
 			accountRepository.getFavourites(localStorage.getItem('userId')).then(function(response) {
 			 		
 			 		$scope.favorites=response.data;
-			 		
 			 		console.log ($scope.favorites);
-
+			 		$scope.btnClassFamous = 'btn btn-large btn-warning btn-famous active';
+						for (let i=0; i<$scope.favorites.length; i++) {
+				           	if ($routeParams.id == $scope.favorites[i].id) {
+				                 	$scope.btnClassFamous = 'btn btn-large btn-default btn-famous disabled';
+				                 	return;
+				                           } 
+				                 }; 
+				                       
 				}, function(error) {});
+		}
 
 
 		// фукция добавления статьи в избранное
@@ -38,7 +68,7 @@ app.controller('ArticleDetails', ['$scope', '$rootScope', '$routeParams', 'webAp
             
 			for (let i=0; i<$scope.favorites.length; i++) {
            		if ($routeParams.id == $scope.favorites[i].id) {
-                 			alert ('Данная статья уже в избранном');
+                 			$scope.btnClassFamous = 'btn btn-large btn-default btn-famous disabled';
                  			return;
                               	} 
                            }; 
@@ -47,7 +77,19 @@ app.controller('ArticleDetails', ['$scope', '$rootScope', '$routeParams', 'webAp
 		   		articlesRepository.addFavorites($scope.newLike)
 		   		.then(function (response) {
 		   			
-		   			console.log (response);
+		   		accountRepository.getFavourites(localStorage.getItem('userId')).then(function(response) {
+			 		
+			 		$scope.favorites=response.data;
+			 		console.log ($scope.favorites);
+			 		$scope.btnClassFamous = 'btn btn-large btn-warning btn-famous active';
+						for (let i=0; i<$scope.favorites.length; i++) {
+				           	if ($routeParams.id == $scope.favorites[i].id) {
+				                 	$scope.btnClassFamous = 'btn btn-large btn-default btn-famous disabled';
+				                 	return;
+				                           } 
+				                 }; 
+				                       
+				}, function(error) {});
 
 
 		   		}, function(error) {});
@@ -62,32 +104,35 @@ app.controller('ArticleDetails', ['$scope', '$rootScope', '$routeParams', 'webAp
             
 				    console.log ($scope.likesElemets);
             		
-                	for (let i=0; i<$scope.likes; i++) {
-                		if (localStorage.getItem('userId') == $scope.likesElemets[i].user_id) {
-                			alert ('Вы уже поставили лайк');
-                			return;
-                               	} 
-                               }; 
                                	
-                               		let userId = localStorage.getItem('userId'),
-                               		articleId = $routeParams.id;
-                               		console.log ('else', userId, articleId);
+                        let userId = localStorage.getItem('userId'),
+                        articleId = $routeParams.id;
+                        console.log ('else', userId, articleId);
                                		
-                               		articlesRepository.addLikes(articleId, {user_id: userId}).then(function(response){
-            		           			console.log (response.data);
+                         articlesRepository.addLikes(articleId, {user_id: userId}).then(function(response){
+            		      console.log (response.data);
 
-            								alert ('Вы добавили лайк');
-            								$scope.newLike= {
-														"article_id": articleId,
-											            "user_id": localStorage.getItem('userId')
-														};
-            																		
-										
-									}, function(error) {});
-									
-                               	
-                    		
-		      			 }
+            		      articlesRepository.getLikes(articleId).then(function(response) {
+            		      	$scope.likes=response.data.length;
+            		      	$scope.likesElemets=response.data;
+            		      	
+            		      	for (let i=0; i<$scope.likes; i++) {
+			              		if (localStorage.getItem('userId') == $scope.likesElemets[i].user_id) {
+			              		console.log ($scope.likesElemets[i].user_id);
+			                	$scope.btnLike='Мне не нравится';
+			                	$scope.btnClass = "btn btn-danger btn-like";
+			                	console.log ('check');
+			                	return $scope.setLike=false;
+			                } 
+			                	
+			              };
+			              $scope.btnLike= ($scope.setLike = true) ? 'Мне нравится' : 'Мне не нравится';
+			              $scope.btnClass = ($scope.setLike = true) ? 'btn btn-success btn-like' : "btn btn-danger btn-like";
+
+            		      });
+
+		}, function(error) {});
+	     			 }
     			}
 
 		
@@ -109,6 +154,11 @@ app.controller('ArticleDetails', ['$scope', '$rootScope', '$routeParams', 'webAp
 	       ];
 			
 	    console.log ($scope.slides);
+
+	    articlesRepository.getCommentsStaticArticles(articleId).then(function(response){
+			console.log(response.data);
+			$scope.count_comments = response.data.length;
+		}, function (error){});
 
 		$scope.current = 0;
 
@@ -135,18 +185,10 @@ app.controller('ArticleDetails', ['$scope', '$rootScope', '$routeParams', 'webAp
 	}, function(error) {});
 
 		
- 	console.log ($scope);
-
-	// $scope.delay = 4000; 
-	// $scope.slides = [
-	//         { 'image': 'image/users-photos/0001.jpg'},
-	//         { 'image': 'image/users-photos/0002.jpg' },
-	//         { 'image': 'image/users-photos/0003.jpg' },
-	//         { 'image': 'image/users-photos/0004.jpg' }
-	//        ];
-
+ 	
 
 	// 					COMMENT
+
 	$scope.newComment = {
 		"article_id": $routeParams.id,
 		"user_id": 0,
@@ -154,6 +196,7 @@ app.controller('ArticleDetails', ['$scope', '$rootScope', '$routeParams', 'webAp
 		"content": "",
 		"static": false
 	}
+
 	$scope.editObj = {
 		rate: '',
 		content: ''
@@ -232,6 +275,7 @@ app.controller('ArticleDetails', ['$scope', '$rootScope', '$routeParams', 'webAp
 			}
 			return data  
 		}
+
 	function showComment(data, flag, mod){
 		for (let i = 0; i < data.length; i++) {
 			data[i][mod] = flag;
@@ -274,11 +318,13 @@ app.controller('ArticleDetails', ['$scope', '$rootScope', '$routeParams', 'webAp
 		})
 	}
 	var locatiPath =  $routeParams.id;
-	console.log(locatiPath)
+	console.log(locatiPath);
+	
 	function getComment(){
 		console.log('Ok')
 		articlesRepository.getCommentsStaticArticles(locatiPath).then(function(response){
-			console.log(response.data)
+			console.log(response.data);
+			$scope.count_comments = response.data.length;
 			let commentMod = debugCommentMod(response.data);
 			let userId = +localStorage.getItem('userId');
 			let access = accesforUser(commentMod, userId, true, 'access');
@@ -310,11 +356,13 @@ app.controller('ArticleDetails', ['$scope', '$rootScope', '$routeParams', 'webAp
 
 
 	articlesRepository.getCommentsStaticArticles(locatiPath).then(function(response){
+		console.log(response.data);
+			
             let commentMod = debugCommentMod(response.data);
             let userId = +localStorage.getItem('userId');
             let access = accesforUser(commentMod, userId, true, 'access');
             let comments = showComment(access, false, 'showComment');
-        	console.log(comments)
+        	console.log(comments);
             $scope.comments = comments.slice().reverse();
 	}) 
 	
@@ -371,5 +419,7 @@ app.controller('ArticleDetails', ['$scope', '$rootScope', '$routeParams', 'webAp
 	}
 	$scope.hidenComment = function(id){
 		$scope.comments = showCommentForId($scope.comments, id, false , 'showComment'); 
+		console.log(id);
+		console.log($scope.comments);
 	}
 }]);

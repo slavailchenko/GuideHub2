@@ -1,5 +1,5 @@
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 /* .video{
     width: 100vw;
@@ -77,21 +77,21 @@ header {
     left: -315px;
     transition: 0.5s;
     z-index: 9999;
-    background: rgba(0, 89, 179,0.5);
+    background: rgba(119, 69, 27, 0.5);
     animation: shining 2.5s infinite;
 }
 
 @keyframes shining {
   0% {
-    border-right: 45px solid rgba(0, 89, 179,0);
+    border-right: 45px solid rgba(119, 69, 27, 0);
   }
 
   50% {
-    border-right: 45px solid rgba(0, 89, 179,1);
+    border-right: 45px solid rgba(119, 69, 27, 1);
   }
 
   100% {
-    border-right: 45px solid rgba(0, 89, 179,0);
+    border-right: 45px solid rgba(119, 69, 27, 0);
   }
 }
 
@@ -130,7 +130,7 @@ header .main-menu .logOut {
 }
 
 .main-menu li:hover {
-    background: rgba(0, 89, 179,0.8);
+    background: rgba(119, 69, 27, 0.8);
 }
 
 .main-menu .account {
@@ -159,9 +159,17 @@ nav button {
 }
 
 .main-header {
-    position: fixed;
+    position: absolute;
     color: white;
+    width: 100%;
+    padding: 0 250px;
 }
+/* .conteinerr{
+    margin: 0 auto;
+    left: 50%;
+    width: 940px;
+    margin
+} */
 
 .main-header .siteName {
     padding-top: 150px;
@@ -221,10 +229,12 @@ nav button {
 
 .main-header-menu li:hover {
     background: rgba(255,255,255, 0.8);
+    /* color: black; */
 }
 
 .main-header-menu li:hover a {
     right: 90px;
+    color: rgb(22, 21, 21);
 }
 
 .main-header-menu li:first-child:hover a {
@@ -280,6 +290,16 @@ nav button {
     padding-bottom: 50px;
     font-size: 30px;
     text-align: center;
+ }
+
+ .first-row .user-name input{
+    border: none;
+    background: no-repeat;
+    border-bottom: 1px solid black;
+    text-align: center;
+ }
+ .first-row .user-name input:focus {
+     outline: none;
  }
 
  .change-user-data {
@@ -402,8 +422,9 @@ nav button {
  }
 
  .article-editor {
-    background: #1E90FF;
+    /* background: #1E90FF; */
     text-align: center;
+    background: #777777a8;
  }
 
  .article-editor .article-title {
@@ -412,7 +433,7 @@ nav button {
  }
 
  .article-editor input {
-    background: #004d99;
+    background:grey;
     color: white;
  }
 

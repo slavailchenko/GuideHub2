@@ -1,4 +1,3 @@
-
 (function(){
     'use strict'
     app.controller('ArticlesUsers', ['$scope', '$rootScope', '$location', 'articles.repository', 'account.repository',
@@ -18,6 +17,7 @@
 
 		$scope.user = [];
 		$scope.likes = [];
+		$scope.count_comments = [];
 
 		for (let i=0; i<response.data.length; i++) {
 			
@@ -34,6 +34,15 @@
 
 				}, function(error) {});
 		}
+
+		for (let i=0; i<response.data.length; i++) {
+			articlesRepository.getCommentsStaticArticles($scope.articles[i].id).then(function(response) {
+			 		
+			$scope.count_comments[i]=response.data.length;
+			console.log ($scope.count_comments[i]);
+
+				}, function(error) {});
+		};
 
 
 		for (let i=0; i<response.data.length; i++) {

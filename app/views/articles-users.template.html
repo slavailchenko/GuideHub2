@@ -1,7 +1,7 @@
 <div class="container-fluid articles-users">
 	<div class='nav-brand'>
     <span>
-       <h2 class="page-header"> <img src='image/icon-travel.png'>
+       <h2 class="page-header"> 
        Статьи пользователей</h2>
     </span>
   </div>
@@ -9,14 +9,14 @@
   <div class="articles">
     <div class="row form-group subheader">
 
-          <div class="col-xs-9 col-md-9">
+          <div class="col-xs-9 col-md-9 search">
 
           	<label>Выберите страну</label>
           	<input type="text" placeholder="Страна" class="form-control" ng-model="searchString">
           </div>
 
 	<div class="col-xs-3 col-md-3">
-		<button type="button" class="btn btn-primary pull-right" ng-click="addArticle()">Добавить статью</button>
+		<button type="button" class="btn btn-primary pull-right" ng-controller='UserAccount' ng-click="openArticleEditor()"><a href="#/user-account">Добавить статью</a></button>
 	</div>
 
     </div>
@@ -35,7 +35,7 @@
 	          <div class="count">
 	            <span class='countlikes'><i class="fa fa-heart fa-2x"></i><big>{{likes[$index]}}
 	            </big></span>
-	            <span class='countcomment'><i class="fa fa-comment fa-2x"></i>{{article.count_comment}}</span>
+	            <span class='countcomment'><i class="fa fa-comment fa-2x"></i><big>{{count_comments[$index]}}</big></span>
 	            <span class="datetravel" ><i class="fa fa-plane fa-2x"></i>
 	             
 	              {{date_travel[$index]}}

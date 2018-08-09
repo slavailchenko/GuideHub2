@@ -292,6 +292,10 @@
                         $rootScope.usersTrips[i] = response.data[i];                        
                     }                    
                 });
+                notify({ 
+                    message:'Поездка удалена', 
+                    classes: "alert danger"
+                  });
             });
         };
 
